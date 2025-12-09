@@ -200,6 +200,51 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      {/* JSON-LD Schema para esta página específica */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'WebApplication',
+            name: 'Análisis Web con IA',
+            url: 'https://paulabad.tech',
+            description: 'Herramienta de análisis web gratuita con Inteligencia Artificial para optimizar sitios web y mejorar conversiones',
+            applicationCategory: 'BusinessApplication',
+            operatingSystem: 'Web',
+            offers: {
+              '@type': 'Offer',
+              price: '0',
+              priceCurrency: 'COP',
+              description: 'Análisis gratuito de sitios web',
+            },
+            author: {
+              '@type': 'Person',
+              name: 'Paula Abad',
+              url: 'https://paulabad.tech',
+              jobTitle: 'Desarrolladora de Software & Data Engineer',
+            },
+            aggregateRating: {
+              '@type': 'AggregateRating',
+              ratingValue: '5',
+              reviewCount: '500',
+            },
+            review: testimonials.slice(0, 3).map(t => ({
+              '@type': 'Review',
+              author: {
+                '@type': 'Person',
+                name: t.name,
+              },
+              reviewRating: {
+                '@type': 'Rating',
+                ratingValue: t.rating,
+                bestRating: '5',
+              },
+              reviewBody: t.text,
+            })),
+          }),
+        }}
+      />
       {/* Navbar */}
       <nav className="fixed top-0 w-full bg-slate-900/80 backdrop-blur-xl border-b border-purple-500/20 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -217,7 +262,7 @@ export default function Home() {
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center gap-8">
               <a 
-                href="https://tiktok.com/@paulabadev" 
+                href="https://tiktok.com/@paulabadtech" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-300 hover:text-purple-400 transition-colors"
@@ -731,7 +776,7 @@ export default function Home() {
           {/* Redes Sociales */}
           <div className="flex items-center justify-center gap-4 mb-4">
             <a 
-              href="https://tiktok.com/@paulabadev" 
+              href="https://tiktok.com/@paulabadtech" 
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 hover:text-purple-400 transition-colors"

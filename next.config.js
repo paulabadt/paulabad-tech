@@ -1,18 +1,16 @@
-
-// next.config.js
 /** @type {import('next').NextConfig} */
-module.exports = {
+const nextConfig = {
   images: {
-    // Permite cargar avatares remotos de la API de Rick and Morty
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'rickandmortyapi.com',
-        port: '',
-        pathname: '/api/character/avatar/**',
-      },
+    domains: [
+      'raw.githubusercontent.com',
+      'apod.nasa.gov',
     ],
-    // O, si prefieres algo más simple:
-    // domains: ['rickandmortyapi.com'],
+    formats: ['image/webp', 'image/avif'],
   },
+  // Compresión
+  compress: true,
+  // PWA
+  reactStrictMode: true,
 };
+
+module.exports = nextConfig;

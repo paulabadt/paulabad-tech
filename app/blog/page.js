@@ -268,6 +268,24 @@ export default function Posts() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Blog',
+            name: 'Blog de Paula Abad',
+            url: 'https://paulabad.tech/blog',
+            description: 'Artículos sobre desarrollo de software, Python, BigQuery, Machine Learning',
+            author: {
+              '@type': 'Person',
+              name: 'Paula Abad',
+              url: 'https://paulabad.tech',
+            },
+          }),
+        }}
+      />
       {/* Header */}
       <header className={`fixed top-0 w-full z-50 transition-colors duration-300 ${darkMode ? 'bg-gray-900/80' : 'bg-white/80'} backdrop-blur-sm border-b ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
         <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -297,7 +315,7 @@ export default function Posts() {
           <div className="hidden md:flex items-center gap-6">
             {/* TikTok */}
             <a 
-              href="https://tiktok.com/@paulabadev" 
+              href="https://tiktok.com/@paulabadtech" 
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors hover:text-purple-500 ${darkMode ? 'text-gray-300' : 'text-black'}`}
@@ -372,7 +390,7 @@ export default function Posts() {
               <div className="pt-4">
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://tiktok.com/@paulabadev" 
+                    href="https://tiktok.com/@paulabadtech" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex items-center gap-3 py-2 transition-colors ${darkMode ? 'text-gray-300 hover:text-purple-400' : 'text-gray-700 hover:text-purple-500'}`}

@@ -5,7 +5,6 @@ import { useParams } from 'next/navigation';
 import ReactMarkdown from 'react-markdown';
 import ProyectoContent from './ProyectoContent';
 
-
 // Iconos SVG (los mismos)
 const InstagramIcon = ({ className }) => (
   <svg className={className} fill="currentColor" viewBox="0 0 24 24">
@@ -161,6 +160,25 @@ export default function ProjectDetail() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      {/* JSON-LD Schema para página About Me */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'SoftwareSourceCode',
+            name: project.translations.es.title,
+            description: project.translations.es.description,
+            author: {
+              '@type': 'Person',
+              name: 'Paula Abad',
+              url: 'https://paulabad.tech',
+            },
+            programmingLanguage: project.tags,
+            url: `https://paulabad.tech/proyectos/${slug}`,
+          }),
+        }}
+      />
       {/* Header - Igual que las otras páginas */}
       <header className={`fixed top-0 w-full z-50 transition-colors duration-300 ${darkMode ? 'bg-gray-900/80' : 'bg-white/80'} backdrop-blur-sm border-b ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
         <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -190,7 +208,7 @@ export default function ProjectDetail() {
           <div className="hidden md:flex items-center gap-6">
             {/* TikTok */}
             <a 
-              href="https://tiktok.com/@paulabadev" 
+              href="https://tiktok.com/@paulabadtech" 
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors hover:text-purple-500 ${darkMode ? 'text-gray-300' : 'text-black'}`}
@@ -250,7 +268,7 @@ export default function ProjectDetail() {
               <div className="pt-4">
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://tiktok.com/@paulabadev" 
+                    href="https://tiktok.com/@paulabadtech" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex items-center gap-3 py-2 transition-colors ${darkMode ? 'text-gray-300 hover:text-purple-400' : 'text-gray-700 hover:text-purple-500'}`}

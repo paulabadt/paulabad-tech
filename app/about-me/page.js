@@ -53,6 +53,33 @@ export default function AboutMe() {
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${darkMode ? 'bg-gray-900' : 'bg-white'}`}>
+      {/* JSON-LD Schema para página About Me */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Person',
+            name: 'Paula Abad',
+            url: 'https://paulabad.tech/about-me',
+            image: 'https://paulabad.tech/paula-avatar.jpeg',
+            sameAs: [
+              'https://github.com/paulabadt',
+              'https://linkedin.com/in/tu-perfil', // ⚠️ CAMBIAR por tu LinkedIn real
+              'https://tiktok.com/@paulabadtech',
+              'https://instagram.com/paulabadtech',
+              'https://twitter.com/libeluladoradas',
+            ],
+            jobTitle: 'Desarrollador de Software & Data Engineer',
+            worksFor: {
+              '@type': 'Organization',
+              name: 'SENA',
+            },
+            description: 'Desarrolladora de software especializada en backend, IoT y análisis de datos',
+            knowsAbout: ['Python', 'Java', 'Netbeans', 'React', 'Next.js', 'AWS', 'BigQuery', 'Machine Learning'],
+          }),
+        }}
+      />
       {/* Header/Navigation */}
       <header className={`fixed top-0 w-full z-50 transition-colors duration-300 ${darkMode ? 'bg-gray-900/80' : 'bg-white/80'} backdrop-blur-sm border-b ${darkMode ? 'border-gray-800' : 'border-gray-200'}`}>
         <nav className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
@@ -72,7 +99,7 @@ export default function AboutMe() {
           <div className="hidden md:flex items-center gap-6">
             {/* TikTok */}
             <a 
-              href="https://tiktok.com/@paulabadev" 
+              href="https://tiktok.com/@paulabadtech" 
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-colors hover:text-purple-500 ${darkMode ? 'text-gray-300' : 'text-black'}`}
@@ -215,7 +242,7 @@ export default function AboutMe() {
           {/* Social Icons Row */}
           <div className="flex items-center justify-center gap-4 mb-8">
             <a 
-              href="https://tiktok.com/@paulabadev" 
+              href="https://tiktok.com/@paulabadtech" 
               target="_blank"
               rel="noopener noreferrer"
               className={`transition-all hover:scale-110 ${darkMode ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-500'}`}
