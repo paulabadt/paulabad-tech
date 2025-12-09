@@ -5,13 +5,6 @@
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
 @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
@@ -23,4 +16,512 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ============================================ */
+/* ESTILOS PARA MARKDOWN / PROSE */
+/* ============================================ */
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Mejoras generales para prose */
+.prose {
+  color: rgb(55 65 81);
+}
+
+.prose-invert {
+  color: rgb(209 213 219);
+}
+
+/* ============================================ */
+/* HEADINGS - TÍTULOS */
+/* ============================================ */
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  font-weight: 700;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: 0.75em;
+}
+
+.prose h1 {
+  font-size: 2.25rem;
+  margin-top: 0;
+  padding-bottom: 0.5em;
+  border-bottom: 2px solid;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  padding-bottom: 0.4em;
+  border-bottom: 1px solid;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.6em;
+}
+
+.prose h4 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-top: 1.4em;
+}
+
+/* ============================================ */
+/* PÁRRAFOS Y TEXTO */
+/* ============================================ */
+
+.prose p {
+  font-size: 17px;
+  line-height: 1.75;
+  margin-top: 1.25em;
+  margin-bottom: 1.25em;
+}
+
+.prose strong {
+  font-weight: 700;
+  color: inherit;
+}
+
+/* ============================================ */
+/* LISTAS */
+/* ============================================ */
+
+.prose ul,
+.prose ol {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.prose ul {
+  list-style-type: disc;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 0.25rem;
+  line-height: 1.75;
+}
+
+.prose li::marker {
+  font-weight: 400;
+}
+
+.prose ul ul,
+.prose ol ol,
+.prose ul ol,
+.prose ol ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ============================================ */
+/* LINKS */
+/* ============================================ */
+
+.prose a {
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.prose a:hover {
+  text-decoration: underline;
+}
+
+/* ============================================ */
+/* CÓDIGO */
+/* ============================================ */
+
+.prose code {
+  font-size: 15px;
+  font-family: ui-monospace, monospace;
+  font-weight: 400;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
+.prose code::before,
+.prose code::after {
+  content: none;
+}
+
+.prose pre {
+  border-radius: 0.75rem;
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  border-width: 1px;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+  position: relative;
+}
+
+.prose pre code {
+  background: transparent;
+  padding: 0;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  display: block;
+}
+
+/* ============================================ */
+/* BLOCKQUOTES */
+/* ============================================ */
+
+.prose blockquote {
+  border-left-width: 4px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  font-style: normal;
+}
+
+.prose blockquote p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+/* ============================================ */
+/* TABLAS */
+/* ============================================ */
+
+.prose table {
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-collapse: collapse;
+  border-width: 1px;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  display: table;
+  table-layout: auto;
+}
+
+.prose thead {
+  border-bottom-width: 2px;
+}
+
+.prose th {
+  font-weight: 700;
+  padding: 1rem;
+  text-align: left;
+  border-right-width: 1px;
+  vertical-align: middle;
+}
+
+.prose th:last-child {
+  border-right-width: 0;
+}
+
+.prose td {
+  padding: 1rem;
+  border-right-width: 1px;
+  border-top-width: 1px;
+  vertical-align: middle;
+}
+
+.prose td:last-child {
+  border-right-width: 0;
+}
+
+.prose tr {
+  border-bottom-width: 1px;
+}
+
+.prose tr:last-child {
+  border-bottom-width: 0;
+}
+
+.prose tbody tr {
+  transition: background-color 0.15s;
+}
+
+/* Tablas responsive */
+@media (max-width: 767px) {
+  .prose table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+/* ============================================ */
+/* IMÁGENES */
+/* ============================================ */
+
+.prose img {
+  border-radius: 0.75rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.prose img:hover {
+  transform: scale(1.02);
+}
+
+/* ============================================ */
+/* HR - LÍNEA HORIZONTAL */
+/* ============================================ */
+
+.prose hr {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  border-top-width: 2px;
+}
+
+/* ============================================ */
+/* COLORES MODO CLARO */
+/* ============================================ */
+
+.prose h1 {
+  color: rgb(0 0 0);
+  border-color: rgb(209 213 219);
+}
+
+.prose h2 {
+  color: rgb(0 0 0);
+  border-color: rgb(209 213 219);
+}
+
+.prose h3,
+.prose h4 {
+  color: rgb(17 24 39);
+}
+
+.prose p {
+  color: rgb(55 65 81);
+}
+
+.prose a {
+  color: rgb(147 51 234);
+}
+
+.prose a:hover {
+  color: rgb(126 34 206);
+}
+
+.prose code {
+  color: rgb(219 39 119);
+  background-color: rgb(253 242 248);
+}
+
+.prose pre {
+  background-color: #282c34;
+  border-color: rgb(209 213 219);
+}
+
+.prose blockquote {
+  border-color: rgb(168 85 247);
+  background-color: rgb(250 245 255);
+  color: rgb(55 65 81);
+}
+
+.prose strong {
+  color: rgb(17 24 39);
+}
+
+.prose ul,
+.prose ol,
+.prose li {
+  color: rgb(55 65 81);
+}
+
+.prose table {
+  border-color: rgb(209 213 219);
+  background-color: rgb(255 255 255);
+}
+
+.prose thead {
+  border-color: rgb(209 213 219);
+  background-color: rgb(243 244 246);
+}
+
+.prose th {
+  color: rgb(17 24 39);
+  border-color: rgb(209 213 219);
+}
+
+.prose td {
+  color: rgb(55 65 81);
+  border-color: rgb(209 213 219);
+}
+
+.prose tr {
+  border-color: rgb(209 213 219);
+}
+
+.prose tbody tr:hover {
+  background-color: rgb(249 250 251);
+}
+
+.prose hr {
+  border-color: rgb(209 213 219);
+}
+
+/* ============================================ */
+/* COLORES MODO OSCURO */
+/* ============================================ */
+
+.prose-invert h1 {
+  color: rgb(255 255 255);
+  border-color: rgb(55 65 81);
+}
+
+.prose-invert h2 {
+  color: rgb(255 255 255);
+  border-color: rgb(55 65 81);
+}
+
+.prose-invert h3,
+.prose-invert h4 {
+  color: rgb(243 244 246);
+}
+
+.prose-invert p {
+  color: rgb(209 213 219);
+}
+
+.prose-invert a {
+  color: rgb(192 132 252);
+}
+
+.prose-invert a:hover {
+  color: rgb(216 180 254);
+}
+
+.prose-invert code {
+  color: rgb(249 168 212);
+  background-color: rgba(31 41 55 / 0.8);
+}
+
+.prose-invert pre {
+  background-color: #282c34;
+  border-color: rgb(55 65 81);
+}
+
+.prose-invert blockquote {
+  border-color: rgb(168 85 247);
+  background-color: rgba(31 41 55 / 0.3);
+  color: rgb(209 213 219);
+}
+
+.prose-invert strong {
+  color: rgb(243 244 246);
+}
+
+.prose-invert ul,
+.prose-invert ol,
+.prose-invert li {
+  color: rgb(209 213 219);
+}
+
+.prose-invert table {
+  border-color: rgb(55 65 81);
+  background-color: rgba(17 24 39 / 0.5);
+}
+
+.prose-invert thead {
+  border-color: rgb(55 65 81);
+  background-color: rgb(31 41 55);
+}
+
+.prose-invert th {
+  color: rgb(243 244 246);
+  border-color: rgb(55 65 81);
+}
+
+.prose-invert td {
+  color: rgb(209 213 219);
+  border-color: rgb(55 65 81);
+}
+
+.prose-invert tr {
+  border-color: rgb(55 65 81);
+}
+
+.prose-invert tbody tr:hover {
+  background-color: rgba(31 41 55 / 0.5);
+}
+
+.prose-invert hr {
+  border-color: rgb(55 65 81);
+}
+
+/* ============================================ */
+/* SCROLL PERSONALIZADO */
+/* ============================================ */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(243 244 246);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background-color: rgb(17 24 39);
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(156 163 175);
+  border-radius: 0.5rem;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(107 114 128);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background-color: rgb(75 85 99);
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(107 114 128);
+  }
+}
+
+/* ============================================ */
+/* SELECCIÓN DE TEXTO */
+/* ============================================ */
+
+::selection {
+  background-color: rgba(168 85 247 / 0.3);
+}
+
+/* ============================================ */
+/* ACCESIBILIDAD */
+/* ============================================ */
+
+*:focus-visible {
+  outline-width: 2px;
+  outline-offset: 2px;
+  outline-color: rgb(168 85 247);
 }
