@@ -143,22 +143,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        {/* Canonical */}
-        <link rel="canonical" href="https://paulabad.tech" />
-        
-        {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        
-        {/* Theme Color */}
-        <meta name="theme-color" content="#8b5cf6" media="(prefers-color-scheme: light)" />
-        <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
-        
-        {/* Manifest */}
-        <link rel="manifest" href="/site.webmanifest" />
-
         {/* Google Analytics */}
         <script 
           async 
@@ -175,6 +159,23 @@ export default function RootLayout({ children }) {
             `,
           }}
         />
+        {/* Canonical */}
+        <link rel="canonical" href="https://paulabad.tech" />
+        
+        {/* Favicons */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+        
+        {/* Theme Color */}
+        <meta name="theme-color" content="#8b5cf6" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
+        
+        {/* Manifest */}
+        <link rel="manifest" href="/site.webmanifest" />
+
+        
         
         {/* Preconnect (para mejorar performance) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
