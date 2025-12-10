@@ -143,21 +143,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        {/* Google tag (gtag.js) */}
-        <script 
-          async 
-          src="https://www.googletagmanager.com/gtag/js?id=G-L7FDLPZ024"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-L7FDLPZ024');
-            `,
-          }}
-        />
         {/* Canonical */}
         <link rel="canonical" href="https://paulabad.tech" />
         
@@ -173,6 +158,23 @@ export default function RootLayout({ children }) {
         
         {/* Manifest */}
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* Google Analytics */}
+        <script 
+          async 
+          src="https://www.googletagmanager.com/gtag/js?id=G-L7FDLPZ024"
+        />
+        <script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-L7FDLPZ024');
+            `,
+          }}
+        />
         
         {/* Preconnect (para mejorar performance) */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
