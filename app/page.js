@@ -159,6 +159,16 @@ export default function Home() {
 
       const data = await res.json();
       if (!res.ok) throw new Error(data.error);
+
+      // ✅ AGREGAR ESTE CÓDIGO: SEO GOOGLE ANALYTICS EVENTO
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'form_submission', {
+          event_category: 'engagement',
+          event_label: 'Website Analysis Form',
+          value: formData.url
+        });
+      }
+
       setResult(data);
     } catch (err) {
       setError(err.message || 'Error al analizar el sitio');
