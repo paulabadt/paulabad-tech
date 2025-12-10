@@ -1,4 +1,5 @@
 import './globals.css';
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   metadataBase: new URL('https://paulabad.tech'),
@@ -240,7 +241,10 @@ export default function RootLayout({ children }) {
           }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+          <Analytics /> {/* ← AGREGAR ESTA LÍNEA */}
+      </body>
     </html>
   );
 }
