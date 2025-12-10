@@ -5,11 +5,11 @@ export const metadata = {
   metadataBase: new URL('https://paulabad.tech'),
   
   title: {
-    default: 'Paula Abad | Desarrollador de Software & Data Engineer',
+    default: 'Paula Abad | Desarrollador de Software & Data Engineer - Portfolio Profesional',
     template: '%s | Paula Abad'
   },
   
-  description: 'Portfolio de Paula Abad - Instructora e Investigadora en SENA. Especializada en desarrollo backend, IoT, Java, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, AWS, Machine Learning y más. Blog sobre programación y proyectos de software.',
+  description: 'Portfolio de Paula Abad - Instructora e Investigadora en el SENA. Especializada en desarrollo backend, IoT, Java, Spring Boot, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, AWS, Machine Learning y más. Blog sobre programación y proyectos de software. Proyectos de microservicios, e-commerce, sistemas de facturación y predicción con IA.',
   
   keywords: [
     'Paula Abad',
@@ -85,10 +85,10 @@ export const metadata = {
     url: 'https://paulabad.tech',
     siteName: 'Paula Abad Portfolio',
     title: 'Paula Abad | Desarrollador de Software & Data Engineer',
-    description: 'Portfolio profesional de Paula Abad - Desarrollo backend, IoT, Inteligencia Artificial, Data Science, Machine Learning. Instructora e Investigadora en SENA.',
+    description: 'Portfolio profesional de Paula Abad - Desarrollo backend, IoT, Inteligencia Artificial, Data Science, Machine Learning. Instructora e Investigadora en el SENA. Experiencia en microservicios, AWS, Python y análisis de datos.',
     images: [
       {
-        url: '/og-image.jpg',
+        url: 'https://paulabad.tech/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Paula Abad - Desarrollador de Software',
@@ -104,7 +104,7 @@ export const metadata = {
     creator: '@libeluladoradas',
     title: 'Paula Abad | Desarrollador de Software',
     description: 'Portfolio profesional - Desarrollo backend, IoT, Inteligencia Artificial, Data Science',
-    images: ['/og-image.jpg'],
+    images: ['https://paulabad.tech/og-image.jpg'],
   },
   
   // Robots
@@ -124,7 +124,7 @@ export const metadata = {
   
   // Verificación (agregar después de registrarte)
   verification: {
-    google: 'pendiente', // Reemplazar con tu código
+    google: 'G-L7FDLPZ024', // Reemplazar con tu código
     yandex: 'pendiente',
     bing: 'pendiente',
   },
