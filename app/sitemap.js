@@ -37,7 +37,7 @@ export default function sitemap() {
     
     // Proyectos individuales
     {
-      url: `${baseUrl}/proyectos/observatorio`,
+      url: `${baseUrl}/proyectos/invoiceflow`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,

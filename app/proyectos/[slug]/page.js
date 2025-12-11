@@ -34,20 +34,19 @@ const DiscordIcon = ({ className }) => (
 const projectsData = [
   {
     id: 1,
-    slug: 'observatorio',
+    slug: 'invoiceflow',
     translations: {
       es: {
-        title: 'E-Commerce Microservices en AWS'
+        title: 'InvoiceFlow - Sistema Integral de Facturación e Inventario para PYMES'
       },
       en: {
-        title: 'E-Commerce Microservices with AWS'
+        title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs'
       }
     },
     image: null,
-    date: '2025-01-15',
     tags: ['Java 11', 'Spring Boot', 'Lambda', 'AWS', 'Terraform', 'API Gateway', 'RDS', 'DynamoDB', 'S3', 'SNS/SQS', 'CloudWatch', 'X-Ray', 'PostgreSQL', 'Postman', 'JUnit', 'Docker', 'JWT Authentication'],
     projectUrl: 'https://paulabad.tech',
-    githubUrl: 'https://github.com/paulabadt/observatorio-salud-mental-bogota',
+    githubUrl: 'https://github.com/paulabadt/invoiceflow',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'

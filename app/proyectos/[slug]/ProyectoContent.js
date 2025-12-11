@@ -6,7 +6,114 @@ import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
 import { Github, ExternalLink, Calendar, Tag as TagIcon, ArrowLeft } from 'lucide-react';
-import 'highlight.js/styles/atom-one-dark.css';
+import 'highlight.js/styles/nord.css'; // Mantén este como base
+
+// Agrega este código justo después de las importaciones
+if (typeof document !== 'undefined') {
+  const style = document.createElement('style');
+  style.textContent = `
+    .hljs {
+      background: #2e3440 !important; /* Fondo oscuro suave */
+      color: #d8dee9 !important; /* Texto gris claro */
+    }
+    
+    /* Keywords (public, class, function) - Azul pastel */
+    .hljs-keyword,
+    .hljs-selector-tag,
+    .hljs-literal,
+    .hljs-section,
+    .hljs-link {
+      color: #88c0d0 !important; /* Azul claro pastel */
+    }
+    
+    /* Strings - Verde menta pastel */
+    .hljs-string,
+    .hljs-attr,
+    .hljs-variable,
+    .hljs-template-variable,
+    .hljs-meta-string {
+      color: #a3be8c !important; /* Verde menta */
+    }
+    
+    /* Functions, methods - Azul cielo pastel */
+    .hljs-title,
+    .hljs-function,
+    .hljs-built_in,
+    .hljs-name,
+    .hljs-section {
+      color: #81a1c1 !important; /* Azul cielo suave */
+    }
+    
+    /* Numbers - Morado pastel muy suave */
+    .hljs-number,
+    .hljs-symbol,
+    .hljs-bullet {
+      color: #b48ead !important; /* Morado pastel */
+    }
+    
+    /* Comments - Gris suave */
+    .hljs-comment,
+    .hljs-quote {
+      color: #616e88 !important; /* Gris azulado */
+      font-style: italic;
+    }
+    
+    /* Types, classes - Amarillo pastel muy suave */
+    .hljs-type,
+    .hljs-class,
+    .hljs-params {
+      color: #ebcb8b !important; /* Amarillo pastel */
+    }
+    
+    /* Annotations (@Configuration, @Bean) - Naranja pastel MUY suave */
+    .hljs-meta,
+    .hljs-doctag {
+      color: #d08770 !important; /* Naranja pastel suave */
+    }
+    
+    /* Operators, punctuation - Gris claro */
+    .hljs-operator,
+    .hljs-punctuation {
+      color: #c0c5ce !important; /* Gris muy claro */
+    }
+    
+    /* Tags HTML - Cyan pastel */
+    .hljs-tag {
+      color: #88c0d0 !important; /* Cyan pastel */
+    }
+    
+    /* Attributes - Verde agua pastel */
+    .hljs-attribute {
+      color: #8fbcbb !important; /* Verde agua */
+    }
+    
+    /* NO usar rojos - reemplazar con colores suaves */
+    .hljs-deletion,
+    .hljs-formula,
+    .hljs-selector-class,
+    .hljs-selector-id {
+      color: #bf616a !important; /* Rojo muy suave (casi rosa palo) */
+    }
+      /* ✅ AGREGAR ESTO AL FINAL: */
+    
+    /* Bloques de código sin lenguaje (diagramas ASCII) */
+    .hljs:not([class*="language-"]) {
+      color: #eceff4 !important; /* Blanco grisáceo */
+    }
+    
+    /* Texto plano en bloques pre */
+    pre code:not([class*="language-"]) {
+      color: #eceff4 !important; /* Blanco grisáceo */
+    }
+    
+    /* Forzar texto claro para todos los elementos sin clase específica */
+    .hljs-text,
+    .hljs-plain {
+      color: #e5e9f0 !important; /* Blanco suave */
+    }
+  `;
+  document.head.appendChild(style);
+}
 
 // Componente para headings con IDs para enlaces
 function HeadingRenderer({ level, children, darkMode }) {
@@ -34,12 +141,10 @@ function HeadingRenderer({ level, children, darkMode }) {
 
 // Componente mejorado para imágenes y banners
 function ImageRenderer({ src, alt, darkMode }) {
-  // Detectar badges (shields.io, img.shields.io, badgen.net)
   const isBadge = src?.includes('shields.io') || 
                   src?.includes('badgen.net') || 
                   src?.includes('badge');
 
-  // Detectar banners o imágenes grandes (por nombre o path)
   const isBanner = alt?.toLowerCase().includes('banner') || 
                    src?.includes('banner') ||
                    src?.includes('docs/');
@@ -69,7 +174,6 @@ function ImageRenderer({ src, alt, darkMode }) {
     );
   }
 
-  // Imágenes normales (screenshots, diagramas)
   return (
     <div className="my-8">
       <img 
@@ -91,7 +195,7 @@ function ImageRenderer({ src, alt, darkMode }) {
   );
 }
 
-// Componente para bloques de código con lenguaje destacado
+// ✅ Componente para bloques de código SIN estilos inline
 function CodeBlockRenderer({ inline, className, children, darkMode }) {
   const match = /language-(\w+)/.exec(className || '');
   const language = match ? match[1] : '';
@@ -107,7 +211,7 @@ function CodeBlockRenderer({ inline, className, children, darkMode }) {
   return (
     <div className="relative group">
       {language && (
-        <div className={`absolute top-0 right-0 px-3 py-1 text-xs font-medium rounded-bl-lg ${
+        <div className={`absolute top-0 right-0 px-3 py-1 text-xs font-medium rounded-bl-lg z-10 ${
           darkMode 
             ? 'bg-gray-700 text-gray-300' 
             : 'bg-gray-200 text-gray-700'
@@ -133,7 +237,6 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
     }`}>
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         
-        {/* Back Button */}
         <a 
           href="/proyectos"
           className={`inline-flex items-center gap-2 mb-8 transition-colors ${
@@ -146,7 +249,6 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
           {language === 'es' ? 'Volver a proyectos' : 'Back to projects'}
         </a>
 
-        {/* Hero Section */}
         <div className="mb-16">
           <h1 className={`text-4xl md:text-5xl font-bold mb-6 ${
             darkMode ? 'text-white' : 'text-black'
@@ -160,22 +262,12 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
             {content.description}
           </p>
 
-          {/* Metadata */}
-          <div className={`flex flex-wrap gap-6 text-sm mb-8 ${
-            darkMode ? 'text-gray-400' : 'text-gray-600'
-          }`}>
-            <div className="flex items-center gap-2">
-              <Calendar className="w-4 h-4" />
-              <span>
-                {new Date(proyecto.date).toLocaleDateString(
-                  language === 'es' ? 'es-CO' : 'en-US',
-                  { day: 'numeric', month: 'long', year: 'numeric' }
-                )}
-              </span>
-            </div>
-          </div>
-
-          {/* Tags */}
+          <div className={`h-px mb-12 ${
+            darkMode 
+              ? 'bg-gradient-to-r from-transparent via-gray-700 to-transparent' 
+              : 'bg-gradient-to-r from-transparent via-gray-300 to-transparent'
+          }`} />
+          
           <div className="flex flex-wrap gap-2 mb-8">
             {proyecto.tags?.map((tag) => (
               <span
@@ -193,60 +285,47 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
           </div>
         </div>
 
-        {/* Divider */}
         <div className={`h-px mb-12 ${
           darkMode 
             ? 'bg-gradient-to-r from-transparent via-gray-700 to-transparent' 
             : 'bg-gradient-to-r from-transparent via-gray-300 to-transparent'
         }`} />
 
-        {/* Content - README Markdown */}
         {readmeContent ? (
           <article className={`prose prose-lg max-w-none
             ${darkMode ? 'prose-invert' : ''}
             
-            /* Headings */
             prose-headings:font-bold prose-headings:tracking-tight prose-headings:leading-tight
             prose-h1:text-4xl prose-h1:mb-6 prose-h1:mt-10 prose-h1:pb-4 prose-h1:border-b-2
             prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-5 prose-h2:pb-3 prose-h2:border-b
             prose-h3:text-2xl prose-h3:mt-10 prose-h3:mb-4 prose-h3:font-semibold
             prose-h4:text-xl prose-h4:mt-8 prose-h4:mb-3 prose-h4:font-semibold
             
-            /* Paragraphs */
             prose-p:leading-relaxed prose-p:text-[17px] prose-p:my-5
             
-            /* Links */
             prose-a:no-underline hover:prose-a:underline prose-a:font-medium prose-a:transition-colors
             
-            /* Code */
             prose-code:text-[15px] prose-code:font-mono prose-code:before:content-none prose-code:after:content-none prose-code:px-2 prose-code:py-1 prose-code:rounded prose-code:font-normal
             prose-pre:rounded-xl prose-pre:shadow-2xl prose-pre:border prose-pre:my-8 prose-pre:p-5 prose-pre:overflow-x-auto
             
-            /* Blockquotes */
             prose-blockquote:border-l-4 prose-blockquote:py-3 prose-blockquote:px-6 prose-blockquote:rounded-r-lg prose-blockquote:my-8 prose-blockquote:not-italic prose-blockquote:font-normal
             
-            /* Strong/Bold */
             prose-strong:font-bold prose-strong:text-inherit
             
-            /* Lists */
             prose-ul:my-6 prose-ul:list-disc prose-ul:pl-6 prose-ul:space-y-2
             prose-ol:my-6 prose-ol:list-decimal prose-ol:pl-6 prose-ol:space-y-2
             prose-li:my-2 prose-li:pl-1 prose-li:leading-relaxed
             
-            /* Tables */
             prose-table:border-collapse prose-table:my-8 prose-table:w-full prose-table:border prose-table:rounded-xl prose-table:overflow-hidden
             prose-thead:border-b-2
             prose-th:font-bold prose-th:p-4 prose-th:text-left prose-th:border-r last:prose-th:border-r-0
             prose-td:p-4 prose-td:border-r prose-td:border-t last:prose-td:border-r-0
             prose-tr:border-b last:prose-tr:border-b-0
             
-            /* Images */
             prose-img:rounded-xl prose-img:my-8
             
-            /* HR */
             prose-hr:my-12 prose-hr:border-t-2
             
-            /* Dark mode colors */
             ${darkMode 
               ? `prose-h1:text-white prose-h1:border-gray-700
                  prose-h2:text-white prose-h2:border-gray-700 
@@ -255,7 +334,7 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
                  prose-p:text-gray-300 
                  prose-a:text-purple-400 hover:prose-a:text-purple-300
                  prose-code:text-pink-300 prose-code:bg-gray-800/80
-                 prose-pre:bg-[#282c34] prose-pre:border-gray-700
+                 prose-pre:bg-[#2e3440] prose-pre:border-gray-700
                  prose-blockquote:border-purple-500 prose-blockquote:bg-gray-800/30 prose-blockquote:text-gray-300
                  prose-strong:text-gray-100 
                  prose-ul:text-gray-300 prose-ol:text-gray-300 prose-li:text-gray-300
@@ -272,7 +351,7 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
                  prose-p:text-gray-700 
                  prose-a:text-purple-600 hover:prose-a:text-purple-700
                  prose-code:text-pink-600 prose-code:bg-pink-50
-                 prose-pre:bg-[#282c34] prose-pre:border-gray-300
+                 prose-pre:bg-white prose-pre:border-gray-300
                  prose-blockquote:border-purple-500 prose-blockquote:bg-purple-50 prose-blockquote:text-gray-700
                  prose-strong:text-gray-900 
                  prose-ul:text-gray-700 prose-ol:text-gray-700 prose-li:text-gray-700
@@ -318,7 +397,6 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
           </div>
         )}
 
-        {/* Nota SENA */}
         <div className={`mt-16 p-6 rounded-2xl border ${
           darkMode 
             ? 'bg-yellow-900/20 border-yellow-500/30' 

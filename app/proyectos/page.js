@@ -71,21 +71,20 @@ const getNASAImage = async (projectId) => {
 const projectsData = [
   {
     id: 1,
-    slug: 'observatorio',
+    slug: 'invoiceflow',
     translations: {
       es: {
-        title: 'E-Commerce Microservices en AWS',
-        description: 'Sistema de e-commerce con arquitectura de microservicios.',
+        title: 'InvoiceFlow - Sistema Integral de Facturación e Inventario para PYMES',
+        description: 'Sistema empresarial completo de facturación electrónica, gestión de inventario y contabilidad desarrollado con arquitectura de microservicios.',
       },
       en: {
-        title: 'E-Commerce Microservices with AWS',
-        description: 'E-commerce system with microservices architecture.',
+        title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs',
+        description: 'Complete enterprise system for electronic invoicing, inventory management, and accounting, built with a microservices architecture.',
       }
     },
-    date: '2025-01-15',
     tags: ['Java 11', 'Spring Boot', 'Lambda', 'AWS', 'Terraform'],
     projectUrl: 'https://paulabad.tech',
-    githubUrl: 'https://github.com/paulabadt/observatorio-salud-mental-bogota',
+    githubUrl: 'https://github.com/paulabadt/invoiceflow',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
@@ -418,13 +417,6 @@ export default function Proyectos() {
                         <Heart className={`w-4 h-4 ${stats.liked ? 'fill-current' : ''}`} />
                         {stats.likes}
                       </button>
-                      <span>•</span>
-                      <span className="text-xs">
-                        {new Date(project.date).toLocaleDateString(
-                          language === 'es' ? 'es-CO' : 'en-US',  
-                          { day: 'numeric', month: 'short', year: 'numeric' }
-                        )}
-                      </span>
                     </div>
 
                     <p className={`mb-4 text-sm line-clamp-3 leading-relaxed ${darkMode ? 'text-gray-300' : 'text-gray-700'}`}>
