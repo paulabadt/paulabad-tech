@@ -1,5 +1,6 @@
 import './globals.css';
-import { Analytics } from "@vercel/analytics/next";
+import GoogleAnalytics from './components/GoogleAnalytics';
+import PageViewTracker from './components/PageViewTracker'; // ✅ AGREGAR
 
 export const metadata = {
   metadataBase: new URL('https://paulabad.tech'),
@@ -144,22 +145,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="es">
       <head>
-        {/* Google Analytics */}
-        <script 
-          async 
-          src="https://www.googletagmanager.com/gtag/js?id=G-L7FDLPZ024"
-        />
-        <script
-          id="google-analytics"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-L7FDLPZ024');
-            `,
-          }}
-        />
         {/* Canonical */}
         <link rel="canonical" href="https://paulabad.tech" />
         
@@ -242,8 +227,9 @@ export default function RootLayout({ children }) {
         />
       </head>
       <body>
+        <GoogleAnalytics /> {/* ✅ AGREGAR AQUÍ */}
+        <PageViewTracker /> {/* ✅ AGREGAR */}
         {children}
-          <Analytics /> {/* ← AGREGAR ESTA LÍNEA */}
       </body>
     </html>
   );
