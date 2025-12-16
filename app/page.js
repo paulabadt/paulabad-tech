@@ -297,7 +297,7 @@ export default function Home() {
                 <MailOpen className="w-5 h-5" />
               </a>
               <a 
-                href="https://wa.me/573113724894?text=Hola%20Paula,%20quiero%20más%20información%20sobre%20tus%20servicios%20de%20optimización%20web." 
+                href="https://wa.me/573054434287?text=Hola%20Paula,%20quiero%20más%20información%20sobre%20tus%20servicios%20de%20optimización%20web." 
                 target="_blank"
                 className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full transition-all transform hover:scale-105 shadow-lg"
               >
@@ -457,7 +457,7 @@ export default function Home() {
                 ¿Necesitas ayuda profesional con tu sitio web?
               </p>
               <a 
-                href="https://wa.me/573113724894?text=Hola Paula, necesito ayuda con mi sitio web"
+                href="https://wa.me/573054434287?text=Hola Paula, necesito ayuda con mi sitio web"
                 target="_blank"
                 className="inline-block bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full text-lg transition-all transform hover:scale-105"
               >
@@ -506,7 +506,7 @@ export default function Home() {
                     Puedo ayudarte a optimizar tu sitio y recuperar esas ventas perdidas.
                   </p>
                   <a 
-                    href={`https://wa.me/573113724894?text=Hola Paula, mi sitio ${formData.url} ya fue analizado. Quiero contratar tus servicios.`}
+                    href={`https://wa.me/573054434287?text=Hola Paula, mi sitio ${formData.url} ya fue analizado. Quiero contratar tus servicios.`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
@@ -618,7 +618,7 @@ export default function Home() {
                     Puedo ayudarte a recuperar esas ventas perdidas
                   </p>
                   <a 
-                    href={`https://wa.me/573113724894?text=Hola Paula, vi mi análisis de ${formData.url} y quiero mejorar mi sitio`}
+                    href={`https://wa.me/573054434287?text=Hola Paula, vi mi análisis de ${formData.url} y quiero mejorar mi sitio`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg"
@@ -812,7 +812,7 @@ export default function Home() {
             </a>
           </div>
           
-          <p className="text-gray-500 text-sm">Cra 10 # 50-44 Barrio Maraya - Pereira, Colombia</p>
+          <p className="text-gray-500 text-sm"><a href='https://share.google/pZW1i3rChMoUaqtBl'> Cra 10 # 50-44 Barrio Maraya - Pereira, Colombia</a></p>
           <p className="text-gray-500 text-sm"><a href='https://www.paulabad.tech'>www.paulabad.tech</a></p>
           <p className="text-gray-500 text-sm mt-2">© 2025 Todos los derechos reservados - Paula Abad</p>
         </div>
