@@ -177,6 +177,7 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Paula Abad',
+              jobTitle: 'Desarrollador de Software',
               url: 'https://paulabad.tech',
               image: 'https://paulabad.tech/paula-avatar.jpeg',
               sameAs: [
@@ -186,7 +187,6 @@ export default function RootLayout({
                 'https://instagram.com/paulabadtech',
                 'https://www.linkedin.com/in/tu-perfil',
               ],
-              jobTitle: 'Desarrolladora de Software & Data Engineer',
               worksFor: {
                 '@type': 'Organization',
                 name: 'SENA',
