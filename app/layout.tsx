@@ -13,11 +13,11 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://paulabad.tech'),
   
   title: {
-    default: 'Paula Abad | Desarrollador de Software & Data Engineer - Portfolio Profesional',
+    default: 'Paula Abad | Desarrollador de Software',
     template: '%s | Paula Abad'
   },
   
-  description: 'Portfolio de Paula Abad - Instructora e Investigadora en el SENA. Especializada en desarrollo backend, IoT, Java, Spring Boot, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, AWS, Machine Learning y más. Blog sobre programación y proyectos de software. Proyectos de microservicios, e-commerce, sistemas de facturación y predicción con IA.',
+  description: 'Portafolio y servicios de desarrollo de software - Instructora e Investigadora en el SENA. Especializada en desarrollo backend, IoT, Java, Spring Boot, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, AWS, Machine Learning y más. Blog sobre programación y proyectos de software. Proyectos de microservicios, e-commerce, sistemas de facturación y predicción con IA.',
   
   keywords: [
     'Paula Abad',
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
     telephone: false,
   },
   
-  openGraph: {
+  /* openGraph: {
     type: 'website',
     locale: 'es_CO',
     alternateLocale: ['en_US'],
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
     title: 'Paula Abad | Desarrollador de Software',
     description: 'Portfolio profesional - Desarrollo backend, IoT, Inteligencia Artificial, Data Science',
     images: ['https://paulabad.tech/og-image.jpg'],
-  },
+  },*/
   
   robots: {
     index: true,
@@ -128,7 +128,7 @@ export const metadata: Metadata = {
   },
   
   verification: {
-    google: 'pendiente',
+    google: 'G-L7FDLPZ024',
     yandex: 'pendiente',
   },
   
