@@ -1,121 +1,193 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeRaw from 'rehype-raw';
-import { Github, ExternalLink, Calendar, Tag as TagIcon, ArrowLeft } from 'lucide-react';
-import 'highlight.js/styles/nord.css'; // Mantén este como base
+import { ArrowLeft, Tag as TagIcon } from 'lucide-react';
+import 'highlight.js/styles/nord.css';
 
-// Agrega este código justo después de las importaciones
 if (typeof document !== 'undefined') {
   const style = document.createElement('style');
   style.textContent = `
     .hljs {
-      background: #2e3440 !important; /* Fondo oscuro suave */
-      color: #d8dee9 !important; /* Texto gris claro */
+      background: #2e3440 !important;
+      color: #d8dee9 !important;
     }
-    
-    /* Keywords (public, class, function) - Azul pastel */
-    .hljs-keyword,
-    .hljs-selector-tag,
-    .hljs-literal,
-    .hljs-section,
-    .hljs-link {
-      color: #88c0d0 !important; /* Azul claro pastel */
+    .hljs-keyword, .hljs-selector-tag, .hljs-literal, .hljs-section, .hljs-link {
+      color: #88c0d0 !important;
     }
-    
-    /* Strings - Verde menta pastel */
-    .hljs-string,
-    .hljs-attr,
-    .hljs-variable,
-    .hljs-template-variable,
-    .hljs-meta-string {
-      color: #a3be8c !important; /* Verde menta */
+    .hljs-string, .hljs-attr, .hljs-variable, .hljs-template-variable, .hljs-meta-string {
+      color: #a3be8c !important;
     }
-    
-    /* Functions, methods - Azul cielo pastel */
-    .hljs-title,
-    .hljs-function,
-    .hljs-built_in,
-    .hljs-name,
-    .hljs-section {
-      color: #81a1c1 !important; /* Azul cielo suave */
+    .hljs-title, .hljs-function, .hljs-built_in, .hljs-name, .hljs-section {
+      color: #81a1c1 !important;
     }
-    
-    /* Numbers - Morado pastel muy suave */
-    .hljs-number,
-    .hljs-symbol,
-    .hljs-bullet {
-      color: #b48ead !important; /* Morado pastel */
+    .hljs-number, .hljs-symbol, .hljs-bullet {
+      color: #b48ead !important;
     }
-    
-    /* Comments - Gris suave */
-    .hljs-comment,
-    .hljs-quote {
-      color: #616e88 !important; /* Gris azulado */
+    .hljs-comment, .hljs-quote {
+      color: #616e88 !important;
       font-style: italic;
     }
-    
-    /* Types, classes - Amarillo pastel muy suave */
-    .hljs-type,
-    .hljs-class,
-    .hljs-params {
-      color: #ebcb8b !important; /* Amarillo pastel */
+    .hljs-type, .hljs-class, .hljs-params {
+      color: #ebcb8b !important;
     }
-    
-    /* Annotations (@Configuration, @Bean) - Naranja pastel MUY suave */
-    .hljs-meta,
-    .hljs-doctag {
-      color: #d08770 !important; /* Naranja pastel suave */
+    .hljs-meta, .hljs-doctag {
+      color: #d08770 !important;
     }
-    
-    /* Operators, punctuation - Gris claro */
-    .hljs-operator,
-    .hljs-punctuation {
-      color: #c0c5ce !important; /* Gris muy claro */
+    .hljs-operator, .hljs-punctuation {
+      color: #c0c5ce !important;
     }
-    
-    /* Tags HTML - Cyan pastel */
     .hljs-tag {
-      color: #88c0d0 !important; /* Cyan pastel */
+      color: #88c0d0 !important;
     }
-    
-    /* Attributes - Verde agua pastel */
     .hljs-attribute {
-      color: #8fbcbb !important; /* Verde agua */
+      color: #8fbcbb !important;
     }
-    
-    /* NO usar rojos - reemplazar con colores suaves */
-    .hljs-deletion,
-    .hljs-formula,
-    .hljs-selector-class,
-    .hljs-selector-id {
-      color: #bf616a !important; /* Rojo muy suave (casi rosa palo) */
+    .hljs-deletion, .hljs-formula, .hljs-selector-class, .hljs-selector-id {
+      color: #bf616a !important;
     }
-      /* ✅ AGREGAR ESTO AL FINAL: */
-    
-    /* Bloques de código sin lenguaje (diagramas ASCII) */
     .hljs:not([class*="language-"]) {
-      color: #eceff4 !important; /* Blanco grisáceo */
+      color: #eceff4 !important;
     }
-    
-    /* Texto plano en bloques pre */
     pre code:not([class*="language-"]) {
-      color: #eceff4 !important; /* Blanco grisáceo */
+      color: #eceff4 !important;
     }
-    
-    /* Forzar texto claro para todos los elementos sin clase específica */
-    .hljs-text,
-    .hljs-plain {
-      color: #e5e9f0 !important; /* Blanco suave */
+    .hljs-text, .hljs-plain {
+      color: #e5e9f0 !important;
     }
   `;
   document.head.appendChild(style);
 }
 
-// Componente para headings con IDs para enlaces
+// ✅ Función para convertir URLs usando el proxy
+function convertImageUrl(src, repoUrl, branch = 'main') {
+  // Si ya es una URL absoluta, devolverla tal cual
+  if (src?.startsWith('http://') || src?.startsWith('https://')) {
+    return src;
+  }
+  
+  // Si es una ruta relativa, convertirla usando el proxy
+  if (src && repoUrl) {
+    try {
+      const match = repoUrl.match(/github\.com\/([^\/]+)\/([^\/]+)/);
+      if (match) {
+        const [, owner, repo] = match;
+        const cleanRepo = repo.replace(/\.git$/, '');
+        
+        // Limpiar src: eliminar ./ o / del inicio
+        let cleanSrc = src.replace(/^\.?\//, '');
+        
+        // Construir URL del proxy
+        const params = new URLSearchParams({
+          owner,
+          repo: cleanRepo,
+          branch,
+          path: cleanSrc,
+        });
+        
+        return `/api/github-image?${params.toString()}`;
+      }
+    } catch (error) {
+      console.error('Error converting image URL:', error);
+    }
+  }
+  
+  return src;
+}
+
+// ✅ Componente de imagen
+function ImageRenderer({ src, alt, darkMode, repoUrl, branch }) {
+  const [imgError, setImgError] = useState(false);
+  const absoluteSrc = convertImageUrl(src, repoUrl, branch);
+  
+  const isBadge = absoluteSrc?.includes('shields.io') || 
+                  absoluteSrc?.includes('badgen.net') || 
+                  absoluteSrc?.includes('badge');
+
+  const isBanner = alt?.toLowerCase().includes('banner') || 
+                   absoluteSrc?.includes('banner') ||
+                   absoluteSrc?.includes('docs/');
+
+  const handleError = () => {
+    console.error('❌ Error loading image:', absoluteSrc);
+    setImgError(true);
+  };
+
+  // Para badges, usar <img> normal
+  if (isBadge) {
+    return (
+      <img 
+        src={absoluteSrc} 
+        alt={alt} 
+        className="inline-block mr-2 my-1 align-middle"
+        style={{ maxHeight: '28px', display: 'inline-block' }}
+        loading="lazy"
+        onError={handleError}
+      />
+    );
+  }
+
+  // Si hubo error, mostrar placeholder
+  if (imgError) {
+    return (
+      <div className={`my-8 p-8 rounded-xl border-2 border-dashed text-center ${
+        darkMode ? 'border-gray-700 bg-gray-800/50' : 'border-gray-300 bg-gray-50'
+      }`}>
+        <svg className={`w-16 h-16 mx-auto mb-2 ${darkMode ? 'text-gray-600' : 'text-gray-400'}`} fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+        </svg>
+        <p className={`text-sm ${darkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+          {alt || 'Image not available'}
+        </p>
+        <p className={`text-xs mt-1 font-mono ${darkMode ? 'text-gray-500' : 'text-gray-500'}`}>
+          {src}
+        </p>
+      </div>
+    );
+  }
+
+  // Para banners
+  if (isBanner) {
+    return (
+      <div className="my-8 -mx-4 sm:mx-0">
+        <img
+          src={absoluteSrc}
+          alt={alt || 'Banner image'}
+          className="w-full rounded-xl shadow-2xl"
+          onError={handleError}
+          loading="lazy"
+        />
+      </div>
+    );
+  }
+
+  // Para imágenes normales
+  return (
+    <div className="my-8">
+      <img
+        src={absoluteSrc}
+        alt={alt || 'Project image'}
+        className={`w-full rounded-xl shadow-2xl border cursor-pointer transition-transform hover:scale-[1.02] ${
+          darkMode ? 'border-gray-800' : 'border-gray-200'
+        }`}
+        onError={handleError}
+        loading="lazy"
+      />
+      {alt && (
+        <p className={`text-center text-sm mt-2 italic ${
+          darkMode ? 'text-gray-500' : 'text-gray-600'
+        }`}>
+          {alt}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function HeadingRenderer({ level, children, darkMode }) {
   const Tag = `h${level}`;
   
@@ -139,63 +211,6 @@ function HeadingRenderer({ level, children, darkMode }) {
   );
 }
 
-// Componente mejorado para imágenes y banners
-function ImageRenderer({ src, alt, darkMode }) {
-  const isBadge = src?.includes('shields.io') || 
-                  src?.includes('badgen.net') || 
-                  src?.includes('badge');
-
-  const isBanner = alt?.toLowerCase().includes('banner') || 
-                   src?.includes('banner') ||
-                   src?.includes('docs/');
-
-  if (isBadge) {
-    return (
-      <img 
-        src={src} 
-        alt={alt} 
-        className="inline-block mr-2 my-1 align-middle"
-        style={{ maxHeight: '28px', display: 'inline-block' }}
-        loading="lazy"
-      />
-    );
-  }
-
-  if (isBanner) {
-    return (
-      <div className="my-8 -mx-4 sm:mx-0">
-        <img 
-          src={src} 
-          alt={alt} 
-          className="w-full rounded-xl shadow-2xl"
-          loading="lazy"
-        />
-      </div>
-    );
-  }
-
-  return (
-    <div className="my-8">
-      <img 
-        src={src} 
-        alt={alt} 
-        className={`w-full rounded-xl shadow-2xl border cursor-pointer transition-transform hover:scale-[1.02] ${
-          darkMode ? 'border-gray-800' : 'border-gray-200'
-        }`}
-        loading="lazy"
-      />
-      {alt && (
-        <p className={`text-center text-sm mt-2 italic ${
-          darkMode ? 'text-gray-500' : 'text-gray-600'
-        }`}>
-          {alt}
-        </p>
-      )}
-    </div>
-  );
-}
-
-// ✅ Componente para bloques de código SIN estilos inline
 function CodeBlockRenderer({ inline, className, children, darkMode }) {
   const match = /language-(\w+)/.exec(className || '');
   const language = match ? match[1] : '';
@@ -230,6 +245,8 @@ function CodeBlockRenderer({ inline, className, children, darkMode }) {
 
 export default function ProyectoContent({ proyecto, readmeContent, language, darkMode }) {
   const content = proyecto.translations[language];
+  const repoUrl = proyecto.github || proyecto.githubUrl || proyecto.repository;
+  const branch = proyecto.branch || 'main';
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${
@@ -372,7 +389,7 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
                 h4: ({ children }) => <HeadingRenderer level={4} darkMode={darkMode}>{children}</HeadingRenderer>,
                 h5: ({ children }) => <HeadingRenderer level={5} darkMode={darkMode}>{children}</HeadingRenderer>,
                 h6: ({ children }) => <HeadingRenderer level={6} darkMode={darkMode}>{children}</HeadingRenderer>,
-                img: ({ src, alt }) => <ImageRenderer src={src} alt={alt} darkMode={darkMode} />,
+                img: ({ src, alt }) => <ImageRenderer src={src} alt={alt} darkMode={darkMode} repoUrl={repoUrl} branch={branch} />,
                 code: ({ inline, className, children }) => 
                   <CodeBlockRenderer inline={inline} className={className} darkMode={darkMode}>
                     {children}

@@ -74,7 +74,7 @@ const projectsData = [
     slug: 'invoiceflow',
     translations: {
       es: {
-        title: 'InvoiceFlow - Sistema Integral de Facturación e Inventario para PYMES',
+        title: 'Sistema Integral de Facturación e Inventario para PYMES',
         description: 'Sistema empresarial completo de facturación electrónica, gestión de inventario y contabilidad desarrollado con arquitectura de microservicios.',
       },
       en: {
@@ -82,7 +82,7 @@ const projectsData = [
         description: 'Complete enterprise system for electronic invoicing, inventory management, and accounting, built with a microservices architecture.',
       }
     },
-    tags: ['Java 11', 'Spring Boot', 'Lambda', 'AWS', 'Terraform'],
+    tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'MongoDB', 'Angular', 'Docker', 'GitLab'],
     projectUrl: 'https://paulabad.tech',
     githubUrl: 'https://github.com/paulabadt/invoiceflow',
     readmeFiles: {
@@ -92,21 +92,21 @@ const projectsData = [
   },
   {
     id: 2,
-    slug: 'sistema-gestion-escolar',
+    slug: 'data-observatory',
     translations: {
       es: {
-        title: 'Sistema de Gestión Escolar',
-        description: 'Plataforma completa para administración de instituciones educativas.',
+        title: 'Observatorio de Salud Mental Escolar - Bogotá',
+        description: 'Sistema de inteligencia artificial para análisis predictivo de salud mental en población escolar.',
       },
       en: {
-        title: 'School Management System',
-        description: 'Complete platform for educational institutions administration.',
+        title: 'School Mental Health Observatory - Bogotá',
+        description: 'AI-powered system for predictive analysis of mental health in school-age population.',
       }
     },
     date: '2024-11-20',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Express'],
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
     projectUrl: 'https://escolar.example.com',
-    githubUrl: 'https://github.com/paulabad/sistema-escolar',
+    githubUrl: 'https://github.com/paulabadt/data-observatory',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'

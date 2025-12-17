@@ -43,7 +43,7 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/proyectos/sistema-gestion-escolar`,
+      url: `${baseUrl}/proyectos/data-observatory`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,

@@ -37,14 +37,14 @@ const projectsData = [
     slug: 'invoiceflow',
     translations: {
       es: {
-        title: 'InvoiceFlow - Sistema Integral de Facturación e Inventario para PYMES'
+        title: 'Sistema Integral de Facturación e Inventario para PYMES'
       },
       en: {
         title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs'
       }
     },
     image: null,
-    tags: ['Java 11', 'Spring Boot', 'Lambda', 'AWS', 'Terraform', 'API Gateway', 'RDS', 'DynamoDB', 'S3', 'SNS/SQS', 'CloudWatch', 'X-Ray', 'PostgreSQL', 'Postman', 'JUnit', 'Docker', 'JWT Authentication'],
+    tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'MongoDB', 'Angular', 'Docker', 'GitLab'],
     projectUrl: 'https://paulabad.tech',
     githubUrl: 'https://github.com/paulabadt/invoiceflow',
     readmeFiles: {
@@ -54,20 +54,20 @@ const projectsData = [
   },
   {
     id: 2,
-    slug: 'sistema-gestion-escolar',
+    slug: 'data-observatory',
     translations: {
       es: {
-        title: 'Sistema de Gestión Escolar'
+        title: 'Observatorio de Salud Mental Escolar - Bogotá'
       },
       en: {
-        title: 'School Management System'
+        title: 'School Mental Health Observatory - Bogotá'
       }
     },
     image: null,
     date: '2024-11-20',
-    tags: ['React', 'Node.js', 'PostgreSQL', 'Express'],
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
     projectUrl: 'https://escolar.example.com',
-    githubUrl: 'https://github.com/paulabad/sistema-escolar',
+    githubUrl: 'https://github.com/paulabadt/data-observatory',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
