@@ -75,20 +75,82 @@ const projectsData = [
   },
   {
     id: 3,
-    slug: 'boutique-luna',
+    slug: 'smart-access',
     translations: {
       es: {
-        title: 'E-commerce Boutique Luna'
+        title: 'Sistema de Control de Acceso Basado en IoT'
       },
       en: {
-        title: 'Boutique Luna E-commerce'
+        title: 'IoT-Based Access Control System'
       }
     },
     image: null,
     date: '2024-09-10',
-    tags: ['Next.js', 'Stripe', 'Supabase', 'Tailwind'],
+    tags: ['C++', 'Python', 'Arduino', 'FastAPI', 'React', 'Docker', 'Jest', 'GitHub Actions'],
     projectUrl: 'https://boutiqueluna.com',
-    githubUrl: null,
+    githubUrl: 'https://github.com/paulabadt/smart-access',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 4,
+    slug: 'invoiceflow',
+    translations: {
+      es: {
+        title: 'Sistema Integral de Facturación e Inventario para PYMES'
+      },
+      en: {
+        title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs'
+      }
+    },
+    image: null,
+    tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'MongoDB', 'Angular', 'Docker', 'GitLab'],
+    projectUrl: 'https://paulabad.tech',
+    githubUrl: 'https://github.com/paulabadt/invoiceflow',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 5,
+    slug: 'data-observatory',
+    translations: {
+      es: {
+        title: 'Observatorio de Salud Mental Escolar - Bogotá'
+      },
+      en: {
+        title: 'School Mental Health Observatory - Bogotá'
+      }
+    },
+    image: null,
+    date: '2024-11-20',
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
+    projectUrl: 'https://escolar.example.com',
+    githubUrl: 'https://github.com/paulabadt/data-observatory',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 6,
+    slug: 'smart-access',
+    translations: {
+      es: {
+        title: 'Sistema de Control de Acceso Basado en IoT'
+      },
+      en: {
+        title: 'IoT-Based Access Control System'
+      }
+    },
+    image: null,
+    date: '2024-09-10',
+    tags: ['C++', 'Python', 'Arduino', 'FastAPI', 'React', 'Docker', 'Jest', 'GitHub Actions'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/smart-access',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'

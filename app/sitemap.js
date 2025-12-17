@@ -49,7 +49,7 @@ export default function sitemap() {
       priority: 0.7,
     },
     {
-      url: `${baseUrl}/proyectos/boutique-luna`,
+      url: `${baseUrl}/proyectos/smart-access`,
       lastModified: currentDate,
       changeFrequency: 'monthly',
       priority: 0.7,

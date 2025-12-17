@@ -114,21 +114,86 @@ const projectsData = [
   },
   {
     id: 3,
-    slug: 'boutique-luna',
+    slug: 'smart-access',
     translations: {
       es: {
-        title: 'E-commerce Boutique Luna',
-        description: 'Tienda online con integración de pagos y gestión de inventario.',
+        title: 'Sistema de Control de Acceso Basado en IoT',
+        description: 'Sistema avanzado de control de acceso basado en IoT para edificios inteligentes con monitoreo en tiempo real y alertas inteligentes.',
       },
       en: {
-        title: 'Boutique Luna E-commerce',
-        description: 'Online store with payment integration and inventory management.',
+        title: 'IoT-Based Access Control System',
+        description: 'Advanced IoT-based access control system for smart buildings with real-time monitoring and intelligent alerts.',
       }
     },
     date: '2024-09-10',
-    tags: ['Next.js', 'Stripe', 'Supabase', 'Tailwind'],
+    tags: ['C++', 'Python', 'Arduino', 'FastAPI', 'React', 'Docker', 'Jest', 'GitHub Actions'],
     projectUrl: 'https://boutiqueluna.com',
-    githubUrl: null,
+    githubUrl: 'https://github.com/paulabadt/smart-access',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 4,
+    slug: 'invoiceflow',
+    translations: {
+      es: {
+        title: 'Sistema Integral de Facturación e Inventario para PYMES',
+        description: 'Sistema empresarial completo de facturación electrónica, gestión de inventario y contabilidad desarrollado con arquitectura de microservicios.',
+      },
+      en: {
+        title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs',
+        description: 'Complete enterprise system for electronic invoicing, inventory management, and accounting, built with a microservices architecture.',
+      }
+    },
+    tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'MongoDB', 'Angular', 'Docker', 'GitLab'],
+    projectUrl: 'https://paulabad.tech',
+    githubUrl: 'https://github.com/paulabadt/invoiceflow',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 5,
+    slug: 'data-observatory',
+    translations: {
+      es: {
+        title: 'Observatorio de Salud Mental Escolar - Bogotá',
+        description: 'Sistema de inteligencia artificial para análisis predictivo de salud mental en población escolar.',
+      },
+      en: {
+        title: 'School Mental Health Observatory - Bogotá',
+        description: 'AI-powered system for predictive analysis of mental health in school-age population.',
+      }
+    },
+    date: '2024-11-20',
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
+    projectUrl: 'https://escolar.example.com',
+    githubUrl: 'https://github.com/paulabadt/data-observatory',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 6,
+    slug: 'smart-access',
+    translations: {
+      es: {
+        title: 'Sistema de Control de Acceso Basado en IoT',
+        description: 'Sistema avanzado de control de acceso basado en IoT para edificios inteligentes con monitoreo en tiempo real y alertas inteligentes.',
+      },
+      en: {
+        title: 'IoT-Based Access Control System',
+        description: 'Advanced IoT-based access control system for smart buildings with real-time monitoring and intelligent alerts.',
+      }
+    },
+    date: '2024-09-10',
+    tags: ['C++', 'Python', 'Arduino', 'FastAPI', 'React', 'Docker', 'Jest', 'GitHub Actions'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/smart-access',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
