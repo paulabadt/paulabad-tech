@@ -4,7 +4,8 @@ import AboutMeClient from './about-me-client';
 export async function generateMetadata() {
   return {
     title: 'Paula Abad | Desarrollador de Software',
-    description: 'Portafolio Profesional. Especializada en desarrollo backend, IoT, Java, Spring Boot, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, Cloud, Machine Learning y más.',
+    description: 'Portafolio Profesional. Especializada en desarrollo backend, IoT, Java, Spring Boot',
+    /*, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, Cloud, Machine Learning y más.',*/
     
     openGraph: {
       type: 'website',
@@ -12,7 +13,8 @@ export async function generateMetadata() {
       url: 'https://paulabad.tech/about-me',
       siteName: 'Paula Abad Portafolio',
       title: 'Paula Abad | Desarrollador de Software',
-      description: 'Portafolio profesional. Especializada en desarrollo backend, IoT, Java, Spring Boot, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, Cloud, Machine Learning y más.',
+      description: 'Portafolio profesional. Especializada en desarrollo backend, IoT, Java, Spring Boot',
+      /*, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, Cloud, Machine Learning y más.',*/
       images: [
         {
           url: 'https://paulabad.tech/og-portfolio.jpg',
@@ -29,7 +31,7 @@ export async function generateMetadata() {
       site: '@libeluladoradas',
       creator: '@libeluladoradas',
       title: 'Paula Abad | Desarrollador de Software',
-      description: 'Portafolio profesional - Backend, IoT, IA, Data Science.',
+      description: 'Portafolio profesional - Backend, IoT, Java, Spring Boot.',
       images: ['https://paulabad.tech/og-portfolio.jpg'],
     },
   };
