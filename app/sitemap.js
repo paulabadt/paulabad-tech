@@ -54,7 +54,25 @@ export default function sitemap() {
       changeFrequency: 'monthly',
       priority: 0.7,
     },
-    
+    {
+      url: `${baseUrl}/proyectos/e-commerce`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/proyectos/dental-flow`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+    {
+      url: `${baseUrl}/proyectos/irrigation`,
+      lastModified: currentDate,
+      changeFrequency: 'monthly',
+      priority: 0.7,
+    },
+
     // Páginas legales (si las tienes)
     {
       url: `${baseUrl}/politica-privacidad`,

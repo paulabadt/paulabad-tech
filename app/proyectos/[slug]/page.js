@@ -65,7 +65,7 @@ const projectsData = [
     },
     image: null,
     date: '2024-11-20',
-    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit', 'Google Colab'],
     projectUrl: 'https://escolar.example.com',
     githubUrl: 'https://github.com/paulabadt/data-observatory',
     readmeFiles: {
@@ -96,19 +96,19 @@ const projectsData = [
   },
   {
     id: 4,
-    slug: 'invoiceflow',
+    slug: 'e-commerce',
     translations: {
       es: {
-        title: 'Sistema Integral de Facturación e Inventario para PYMES'
+        title: 'Plataforma de E-Commerce con Microservicios Serverless en AWS'
       },
       en: {
-        title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs'
+        title: 'Serverless E-Commerce Microservices Platform on AWS'
       }
     },
     image: null,
-    tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'MongoDB', 'Angular', 'Docker', 'GitLab'],
+    tags: ['Java 17', 'Spring Boot', 'AWS ', 'Node.js', 'Amazon DynamoDB', 'Terraform ', 'AWS CodePipeline', 'DevOps', 'React', 'GitHub Actions'],
     projectUrl: 'https://paulabad.tech',
-    githubUrl: 'https://github.com/paulabadt/invoiceflow',
+    githubUrl: 'https://github.com/paulabadt/e-commerce',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
@@ -116,20 +116,20 @@ const projectsData = [
   },
   {
     id: 5,
-    slug: 'data-observatory',
+    slug: 'dental-flow',
     translations: {
       es: {
-        title: 'Observatorio de Salud Mental Escolar - Bogotá'
+        title: 'Sistema Inteligente de Gestión de Citas Odontológicas con Integración WhatsApp'
       },
       en: {
-        title: 'School Mental Health Observatory - Bogotá'
+        title: 'Smart Dental Appointment Management System with WhatsApp Integration'
       }
     },
     image: null,
     date: '2024-11-20',
-    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
+    tags: ['Java 11', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'Maven', 'Angular', 'API WhatsApp', 'Docker', 'Postman', 'Jenkins', 'GitLab'],
     projectUrl: 'https://escolar.example.com',
-    githubUrl: 'https://github.com/paulabadt/data-observatory',
+    githubUrl: 'https://github.com/paulabadt/dental-flow',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
@@ -137,20 +137,20 @@ const projectsData = [
   },
   {
     id: 6,
-    slug: 'smart-access',
+    slug: 'irrigation',
     translations: {
       es: {
-        title: 'Sistema de Control de Acceso Basado en IoT'
+        title: 'Sistema Inteligente de Riego IoT para Cultivos de Caña de Azúcar'
       },
       en: {
-        title: 'IoT-Based Access Control System'
+        title: 'Intelligent IoT Irrigation System for Sugarcane Crops'
       }
     },
     image: null,
     date: '2024-09-10',
-    tags: ['C++', 'Python', 'Arduino', 'FastAPI', 'React', 'Docker', 'Jest', 'GitHub Actions'],
+    tags: ['C++', 'Python', 'Arduino', 'TensorFlow', 'Mosquitto MQTT', 'Grafana', 'React', 'GitHub'],
     projectUrl: 'https://boutiqueluna.com',
-    githubUrl: 'https://github.com/paulabadt/smart-access',
+    githubUrl: 'https://github.com/paulabadt/irrigation',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'

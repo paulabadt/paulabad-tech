@@ -104,7 +104,7 @@ const projectsData = [
       }
     },
     date: '2024-11-20',
-    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
+    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit', 'Google Colab'],
     projectUrl: 'https://escolar.example.com',
     githubUrl: 'https://github.com/paulabadt/data-observatory',
     readmeFiles: {
@@ -136,20 +136,20 @@ const projectsData = [
   },
   {
     id: 4,
-    slug: 'invoiceflow',
+    slug: 'e-commerce',
     translations: {
       es: {
-        title: 'Sistema Integral de Facturación e Inventario para PYMES',
-        description: 'Sistema empresarial completo de facturación electrónica, gestión de inventario y contabilidad desarrollado con arquitectura de microservicios.',
+        title: 'Plataforma de E-Commerce con Microservicios Serverless en AWS',
+        description: 'Plataforma de e-commerce de nivel empresarial aprovechando servicios nativos de AWS para máxima escalabilidad, confiabilidad y eficiencia de costos.',
       },
       en: {
-        title: 'InvoiceFlow - Comprehensive Invoicing & Inventory Management System for SMEs',
-        description: 'Complete enterprise system for electronic invoicing, inventory management, and accounting, built with a microservices architecture.',
+        title: 'Serverless E-Commerce Microservices Platform on AWS',
+        description: 'Enterprise-grade serverless e-commerce platform leveraging AWS cloud-native services for maximum scalability, reliability, and cost-efficiency.',
       }
     },
-    tags: ['Java 17', 'Spring Boot', 'Spring Cloud', 'Kafka', 'PostgreSQL', 'MongoDB', 'Angular', 'Docker', 'GitLab'],
+    tags: ['Java 17', 'Spring Boot', 'AWS ', 'Node.js', 'Amazon DynamoDB', 'Terraform ', 'AWS CodePipeline', 'DevOps', 'React', 'GitHub Actions'],
     projectUrl: 'https://paulabad.tech',
-    githubUrl: 'https://github.com/paulabadt/invoiceflow',
+    githubUrl: 'https://github.com/paulabadt/e-commerce',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
@@ -157,21 +157,21 @@ const projectsData = [
   },
   {
     id: 5,
-    slug: 'data-observatory',
+    slug: 'dental-flow',
     translations: {
       es: {
-        title: 'Observatorio de Salud Mental Escolar - Bogotá',
-        description: 'Sistema de inteligencia artificial para análisis predictivo de salud mental en población escolar.',
+        title: 'Sistema Inteligente de Gestión de Citas Odontológicas con Integración WhatsApp',
+        description: 'Solución completa para la gestión de consultorios odontológicos con agendamiento inteligente, recordatorios automáticos por WhatsApp y portal del paciente.',
       },
       en: {
-        title: 'School Mental Health Observatory - Bogotá',
-        description: 'AI-powered system for predictive analysis of mental health in school-age population.',
+        title: 'Smart Dental Appointment Management System with WhatsApp Integration',
+        description: 'Complete solution for dental clinic management with intelligent appointment scheduling, automated WhatsApp reminders, and patient portal.',
       }
     },
     date: '2024-11-20',
-    tags: ['Python', 'Pandas', 'Numpy', 'Matplotlib', 'TensorFlow', 'Scikit-learn', 'Streamlit'],
+    tags: ['Java 11', 'Spring Boot', 'PostgreSQL', 'Hibernate', 'Maven', 'Angular', 'API WhatsApp', 'Docker', 'Postman', 'Jenkins', 'GitLab'],
     projectUrl: 'https://escolar.example.com',
-    githubUrl: 'https://github.com/paulabadt/data-observatory',
+    githubUrl: 'https://github.com/paulabadt/dental-flow',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
@@ -179,21 +179,21 @@ const projectsData = [
   },
   {
     id: 6,
-    slug: 'smart-access',
+    slug: 'irrigation',
     translations: {
       es: {
-        title: 'Sistema de Control de Acceso Basado en IoT',
-        description: 'Sistema avanzado de control de acceso basado en IoT para edificios inteligentes con monitoreo en tiempo real y alertas inteligentes.',
+        title: 'Sistema Inteligente de Riego IoT para Cultivos de Caña de Azúcar',
+        description: 'Solución de riego de precisión para cañeros - Apoyando la iniciativa de tecnología agrícola del SENA.',
       },
       en: {
-        title: 'IoT-Based Access Control System',
-        description: 'Advanced IoT-based access control system for smart buildings with real-time monitoring and intelligent alerts.',
+        title: 'Intelligent IoT Irrigation System for Sugarcane Crops',
+        description: 'Precision irrigation solution for sugarcane farmers - Supporting SENA agricultural technology initiative.',
       }
     },
     date: '2024-09-10',
-    tags: ['C++', 'Python', 'Arduino', 'FastAPI', 'React', 'Docker', 'Jest', 'GitHub Actions'],
+    tags: ['C++', 'Python', 'Arduino', 'TensorFlow', 'Mosquitto MQTT', 'Grafana', 'React', 'GitHub'],
     projectUrl: 'https://boutiqueluna.com',
-    githubUrl: 'https://github.com/paulabadt/smart-access',
+    githubUrl: 'https://github.com/paulabadt/irrigation',
     readmeFiles: {
       es: 'README.es.md',
       en: 'README.md'
