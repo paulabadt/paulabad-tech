@@ -199,6 +199,28 @@ const projectsData = [
       en: 'README.md'
     }
   },
+  {
+    id: 7,
+    slug: 'driver',
+    translations: {
+      es: {
+        title: 'Predicción de Fatiga de Pilotos en Fórmula 1 mediante Análisis de Telemetría y Machine Learning',
+        description: 'Modelo predictivo de fatiga de pilotos F1 basado en telemetría. Alcanzando 99.79% de precisión en 6 circuitos.',
+      },
+      en: {
+        title: 'Prediction of Driver Fatigue in Formula 1 Through Telemetry Analysis and Machine Learning',
+        description: 'F1 driver fatigue predictive model based on telemetry. Achieving 99.79% accuracy across 6 circuits.',
+      }
+    },
+    date: '2025-12-23',
+    tags: ['Python', 'Fastf1', 'Pandas', 'Xgboost', 'SHAP', 'Machine Learning'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/driver',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
 ];
 
 export default function Proyectos() {

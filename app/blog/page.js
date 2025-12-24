@@ -36,7 +36,7 @@ const cutePokemon = [4, 25, 39, 133, 151, 172, 175, 183, 360, 659];
 const coolPokemon = [6, 94, 130, 131, 143, 150, 248, 350, 445, 448, 643];
 
 // Legendarios
-const legendaryPokemon = [150, 151, 249, 250, 384, 385, 483, 484, 487, 433, 197, 216, 1];
+const legendaryPokemon = [150, 151, 249, 250, 384, 385, 483, 484, 487, 433, 197, 216, 1, 894];
 
 // Combinar todos en un solo array con URLs
 const pokemonImages = [
@@ -63,6 +63,23 @@ const postsData = [
     id: 1,
     translations: {
       es: {
+        title: 'Predicción de Fatiga de Pilotos en Fórmula 1 mediante Análisis de Telemetría y Machine Learning',
+        description: 'Modelo predictivo de fatiga de pilotos F1 basado en telemetría. Alcanzando 99.79% de precisión en 6 circuitos.',
+      },
+      en: {
+        title: 'Prediction of Driver Fatigue in Formula 1 Through Telemetry Analysis and Machine Learning',
+        description: 'F1 driver fatigue predictive model based on telemetry. Achieving 99.79% accuracy across 6 circuits.',
+      }
+    },
+    image: pokemonImages[34],
+    date: '2025-12-23',
+    tags: ['Python', 'Fastf1', 'Pandas', 'Xgboost', 'SHAP', 'Machine Learning'],
+    postUrl: '/proyectos/driver',
+  },
+  {
+    id: 2,
+    translations: {
+      es: {
         title: 'Modelo de clasificación utilizando SQL en Google BigQuery:',
         description: 'Google BigQuery es una poderosa herramienta que permite realizar análisis de datos a gran escala en la nube, y también es posible utilizarla para entrenar modelos de aprendizaje automático. ',
       },
@@ -77,7 +94,7 @@ const postsData = [
     postUrl: 'https://www.linkedin.com/posts/gdgcloudsantiago_allcloudlatam-activity-7093005805993488384-IBiA?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAAA24wzABP4XESdRVVp2E0zAjMnPiWJ3Dums&utm_campaign=whatsapp',
   },
   {
-    id: 2,
+    id: 3,
     translations: {
       es: {
         title: 'Jueves de Python',
@@ -94,7 +111,7 @@ const postsData = [
     postUrl: 'https://www.linkedin.com/posts/data-engineering-latam_juega-snake-game-y-pr%C3%A1ctica-python-con-la-activity-7004195435082874880-Zz0p?utm_source=share&utm_medium=member_desktop',
   },
   {
-    id: 3,
+    id: 4,
     translations: {
       es: {
         title: 'Tipos de Algoritmos de Machine Learning',
@@ -111,7 +128,7 @@ const postsData = [
     postUrl: 'https://www.linkedin.com/posts/data-engineering-latam_los-algoritmos-de-machine-learning-activity-7003427241208463360-gd-S?utm_source=share&utm_medium=member_desktop',
   },
   {
-    id: 4,
+    id: 5,
     translations: {
       es: {
         title: 'Python: Estructuras de Control',
@@ -128,7 +145,7 @@ const postsData = [
     postUrl: 'https://youtu.be/hT160XTQpG0?si=H_tpxQVWNbjGXKSx',
   },
   {
-    id: 5,
+    id: 6,
     translations: {
       es: {
         title: '3 Libros para iniciar en Data Science',
@@ -145,7 +162,7 @@ const postsData = [
     postUrl: 'https://www.linkedin.com/posts/data-engineering-latam_libros-data-science-activity-6964929181067399168-OnS7?utm_source=share&utm_medium=member_desktop',
   },
   {
-    id: 6,
+    id: 7,
     translations: {
       es: {
         title: 'Cierre del Reto HBO',
@@ -162,7 +179,7 @@ const postsData = [
     postUrl: 'https://youtu.be/NI4RHohtvwM?si=fHjgmfJVzFISQ5lb',
   },
   {
-    id: 7,
+    id: 8,
     translations: {
       es: {
         title: '¿𝗬𝗮 𝗰𝗼𝗻𝗼𝗰𝗲𝘀 𝗹𝗼𝘀 𝘁𝗶𝗽𝗼𝘀 𝗱𝗲 𝗔𝗻á𝗹𝗶𝘀𝗶𝘀 𝗱𝗲 𝗗𝗮𝘁𝗼𝘀?',
@@ -179,7 +196,7 @@ const postsData = [
     postUrl: 'https://www.linkedin.com/posts/data-engineering-latam_preguntas-comerciales-para-el-an%C3%A1lisis-de-activity-6948686082339151872-BZ0e?utm_source=share&utm_medium=member_desktop',
   },
   {
-    id: 8,
+    id: 9,
     translations: {
       es: {
         title: 'Tips de un Data Scientist para el Reto HBO',
