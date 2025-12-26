@@ -70,7 +70,7 @@ export default function TerminosCondiciones() {
             <p>
               Para consultas sobre estos términos:<br />
               <strong>Email:</strong><a href="mailto:paula@paulabad.tech"> paula@paulabad.tech</a><br />
-              <strong>WhatsApp:</strong><a href="https://wa.me/573113724894?text=Hola%20Paula,%20quiero%20más%20información%20sobre%20tus%20servicios%20de%20optimización%20web."> +57 311 372 4894</a>
+              <strong>WhatsApp:</strong><a href="https://wa.me/573054434287?text=Hola%20Paula,%20quiero%20más%20información%20sobre%20tus%20servicios%20de%20optimización%20web."> +57 305 443 4287</a>
             </p>
           </section>
         </div>
