@@ -2,7 +2,6 @@
 import { useState, useEffect } from 'react';
 import { Search, Zap, BarChart3, TrendingUp, CheckCircle2, XCircle, Download, MessageCircle, Clock, AlertTriangle, ArrowRight, Sparkles, Target, Users, Award, MailOpen, Phone, Menu, X } from 'lucide-react';
 import { generateClientPDF } from '@/lib/pdfGenerator';
-import ChristmasBanner from '@/components/ChristmasBanner'; // ← AGREGAR ESTE IMPORT
 
 // Iconos SVG personalizados
 const InstagramIcon = ({ className }) => (
@@ -818,8 +817,6 @@ export default function HomeClient() {
           <p className="text-gray-500 text-sm mt-2">© 2025 Todos los derechos reservados - Paula Abad</p>
         </div>
       </footer>
-      {/* Banner de Navidad */}
-      <ChristmasBanner />
     </div>
   );
 }
