@@ -7,8 +7,15 @@ export default function sitemap() {
     {
       url: baseUrl,
       lastModified: currentDate,
-      changeFrequency: 'weekly', // Cambia frecuentemente por el análisis de sitios
+      changeFrequency: 'weekly', // Cambia frecuentemente por nuevos contenidos
       priority: 1.0, // Máxima prioridad
+    },
+    // Análisis Web IA
+    {
+      url: `${baseUrl}/analisis-web`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly', // Cambia frecuentemente por el análisis de sitios
+      priority: 0.8, 
     },
     
     // Sobre mí
