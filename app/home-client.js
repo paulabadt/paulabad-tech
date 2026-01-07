@@ -80,7 +80,10 @@ export default function HomeEnterprise() {
               alt="Paula Abad Logo" 
               className="w-10 h-10 rounded-lg"
             />
-            <span className="text-xl font-bold text-black"><a href='/'>Paula Abad</a></span><em className="text-white">Desarrollador de Software</em>
+            <span className="text-xl font-bold text-black whitespace-nowrap">
+              <a href='/'>Paula Abad</a>
+            </span>
+            <span className="sr-only">Desarrollador de Software</span>
             </div>
 
             {/* Desktop Menu */}
@@ -110,10 +113,32 @@ export default function HomeEnterprise() {
         {mobileMenuOpen && (
           <div className="md:hidden bg-white border-t border-gray-100">
             <div className="px-4 py-6 space-y-4">
-              <a href="#soluciones" className="block text-gray-600 hover:text-gray-900 font-medium">Soluciones</a>
-              <a href="#servicios" className="block text-gray-600 hover:text-gray-900 font-medium">Servicios</a>
-              <a href="/analisis-web" className="block text-gray-600 hover:text-gray-900 font-medium">Análisis Web</a>
-              <a href="#contacto" className="block bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-lg font-medium">
+              <a 
+                href="#soluciones" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-gray-600 hover:text-gray-900 font-medium"
+              >
+                Soluciones
+              </a>
+              <a 
+                href="#servicios" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-gray-600 hover:text-gray-900 font-medium"
+              >
+                Servicios
+              </a>
+              <a 
+                href="/analisis-web" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block text-gray-600 hover:text-gray-900 font-medium"
+              >
+                Análisis Web
+              </a>
+              <a 
+                href="#contacto" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-lg font-medium"
+              >
                 Contactar
               </a>
             </div>
@@ -125,6 +150,7 @@ export default function HomeEnterprise() {
       <section className="pt-32 pb-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
+
             {/* Left - Content */}
             <div className="space-y-8">
 
@@ -138,7 +164,7 @@ export default function HomeEnterprise() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <a 
-                  href="#contacto"
+                  href="https://wa.me/573054434287?text=Hola,%20quiero%20agendar%20una%20consulta%20gratuita"
                   className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl"
                 >
                   Agendar consulta
@@ -564,13 +590,14 @@ export default function HomeEnterprise() {
             <div className="md:col-span-2">
               <div className="flex items-center gap-2 mb-4">
                 <img 
-              src="/logo.png" 
-              alt="Paula Abad Logo" 
-              className="w-9 h-9 rounded-lg"
-            />
-            <a href="/" className={`text-xl font-bold transition-colors `}>
-              Paula Abad <em className="text-white">Desarrollador de Software</em>
-            </a>
+                  src="/logo.png" 
+                  alt="Paula Abad Logo" 
+                  className="w-8 h-8 rounded-lg"
+                />
+                <a href="/" className="text-xl font-bold text-gray-900">
+                  Paula Abad
+                </a>
+                <span className="sr-only">Desarrollador de Software</span>
               </div>
               <p className="text-gray-600 text-sm mb-4">
                 Consultoría y desarrollo de software empresarial especializado en IA, Data Science y soluciones personalizadas.

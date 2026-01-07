@@ -90,7 +90,7 @@ export default function AboutMeClient() {
               alt="Paula Abad Logo" 
               className="w-10 h-10 rounded-lg"
             />
-            <a href="/" className={`text-xl font-bold transition-colors ${darkMode ? 'text-white' : 'text-black'}`}>
+            <a href="/about-me" className={`text-xl font-bold transition-colors ${darkMode ? 'text-white' : 'text-black'}`}>
               paulabad.tech
             </a>
           </div>
