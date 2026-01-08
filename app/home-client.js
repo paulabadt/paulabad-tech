@@ -265,7 +265,7 @@ export default function HomeEnterprise() {
           </div>
 
           {/* Solution 2 */}
-          <div className="grid lg:grid-cols-2 gap-16 items-center mb-32">
+          <div id="data" className="grid lg:grid-cols-2 gap-16 items-center mb-32">
             <div className="order-2 lg:order-1 relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-blue-100 to-cyan-100 rounded-2xl overflow-hidden shadow-xl">
                 <img 
@@ -620,7 +620,7 @@ export default function HomeEnterprise() {
               <h4 className="font-semibold text-gray-900 mb-4">Servicios</h4>
               <ul className="space-y-2 text-sm text-gray-600">
                 <li><a href="#soluciones" className="hover:text-gray-900">Soluciones IA</a></li>
-                <li><a href="#soluciones" className="hover:text-gray-900">Data Science</a></li>
+                <li><a href="#data" className="hover:text-gray-900">Data Science</a></li>
                 <li><a href="#servicios" className="hover:text-gray-900">Desarrollo Web</a></li>
                 <li><a href="#servicios" className="hover:text-gray-900">Apps Móviles</a></li>
               </ul>

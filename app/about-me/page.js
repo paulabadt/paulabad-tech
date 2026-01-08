@@ -3,7 +3,7 @@ import AboutMeClient from './about-me-client';
 // ✅ Generar metadata dinámicamente 
 export async function generateMetadata() {
   return {
-    title: 'Paula Abad | Desarrollador de Software',
+    title: 'Software Developer',
     description: 'Portafolio Profesional. Especializada en desarrollo backend, IoT, Java, Spring Boot',
     /*, Netbeans, microservicios, desarrollo de paginas web, análisis de datos con Python, Inteligencia Artificial, BigQuery, Cloud, Machine Learning y más.',*/
     
