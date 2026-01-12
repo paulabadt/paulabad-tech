@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { 
   Menu, X, ChevronRight, Sparkles, Shield, Code, 
   Smartphone, BarChart3, Zap, CheckCircle, ArrowRight,
@@ -22,6 +22,16 @@ const TikTokIcon = ({ className }) => (
 
 export default function HomeEnterprise() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -57,6 +67,28 @@ export default function HomeEnterprise() {
           }),
         }}
       />
+      {/* Scroll to Top Button - Solo visible después de scroll */}
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-24 right-6 z-50 bg-gray-400 hover:bg-gray-500 text-white p-3 rounded-full shadow-lg transition-all transform hover:scale-110 animate-fade-in"
+          aria-label="Volver arriba"
+        >
+          <svg 
+            className="w-5 h-5" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M5 10l7-7m0 0l7 7m-7-7v18" 
+            />
+          </svg>
+        </button>
+      )}
       {/* WhatsApp Floating Button */}
       <a 
         href="https://wa.me/573054434287?text=Hola,%20quiero%20más%20información%20sobre%20los%20servicios" 
@@ -90,7 +122,12 @@ export default function HomeEnterprise() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#soluciones" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Soluciones</a>
               <a href="#servicios" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Servicios</a>
-              <a href="/analisis-web" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Análisis Web</a>
+              <a 
+                href="/analisis-web" 
+                className="border-2 border-purple-500 text-purple-600 hover:bg-purple-50 text-sm font-semibold py-1.5 px-4 rounded-lg transition-colors flex items-center gap-2"
+              >
+                Análisis Web
+              </a>
               <a 
                 href="#contacto"
                 className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-medium py-2 px-5 rounded-lg transition-colors"
@@ -170,13 +207,6 @@ export default function HomeEnterprise() {
                   Agendar consulta
                   <ArrowRight className="w-5 h-5" />
                 </a>
-                <a 
-                  href="/analisis-web"
-                  className="inline-flex items-center justify-center gap-2 bg-white border-2 border-purple-600 hover:bg-purple-50 text-purple-600 font-semibold py-4 px-8 rounded-lg transition-all"
-                >
-                  Análisis gratuito
-                  <ChevronRight className="w-5 h-5" />
-                </a>
               </div>
             </div>
 
@@ -184,8 +214,8 @@ export default function HomeEnterprise() {
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-purple-50 to-blue-50 rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&h=800&fit=crop" 
-                  alt="Equipo trabajando en soluciones tecnológicas"
+                  src="/paula.png" 
+                  alt="Paula Abad - Desarrollador de Software"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -206,15 +236,46 @@ export default function HomeEnterprise() {
         </div>
       </section>
 
-      {/* Trusted By Section */}
-      <section className="py-12 px-4 bg-gray-50">
-        <div className="max-w-7xl mx-auto text-center">
-          <p className="text-sm text-gray-500 mb-8">Confianza de organizaciones líderes</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center opacity-60">
-            <img src="/sena.png" alt="SENA" className="h-24 object-contain mx-auto grayscale" />
-            <img src="/senova.png" alt="SENNOVA" className="h-24 object-contain mx-auto grayscale" />
-            <img src="/laser.png" alt="Sensory" className="h-24 object-contain mx-auto grayscale" />
-            <img src="/yilmar.png" alt="Centro Cirugía" className="h-24 object-contain mx-auto grayscale" />
+      {/* Trusted By Section - Logos animados */}
+      <section className="py-12 px-4 bg-gray-50 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-sm text-gray-500 mb-8 text-center">Confianza de organizaciones líderes a nivel nacional e internacional</p>
+          
+          {/* Contenedor del carousel */}
+          <div className="relative w-full">
+            {/* Gradientes laterales para efecto fade */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+            
+            {/* Track de logos con animación */}
+            <div className="flex gap-16 animate-scroll-logos">
+              {/* Primer set de logos */}
+              <div className="flex gap-16 items-center shrink-0">
+                <img src="/sena.png" alt="SENA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/senova.png" alt="SENNOVA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/mintic.png" alt="Mintic" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/sensory.jpg" alt="Sensory" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/yilmar.png" alt="Centro Cirugía" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/laser.png" alt="Laser" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/takami.png" alt="Takami" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/pucp.png" alt="Pontificia Peru" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/mexico.png" alt="Energy Solutions SA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/mintic.png" alt="Mintic" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+              </div>
+              
+              {/* Segundo set duplicado para loop infinito */}
+              <div className="flex gap-16 items-center shrink-0">
+                <img src="/sena.png" alt="SENA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/senova.png" alt="SENNOVA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/mintic.png" alt="Mintic" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/sensory.jpg" alt="Sensory" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/yilmar.png" alt="Centro Cirugía" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/laser.png" alt="Laser" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/takami.png" alt="Takami" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/pucp.png" alt="Pontificia Peru" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/mexico.png" alt="Energy Solutions SA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -256,7 +317,7 @@ export default function HomeEnterprise() {
             <div className="relative">
               <div className="aspect-[4/3] bg-gradient-to-br from-purple-100 to-blue-100 rounded-2xl overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&fit=crop" 
+                  src="/ai.png" 
                   alt="Inteligencia Artificial"
                   className="w-full h-full object-cover"
                 />

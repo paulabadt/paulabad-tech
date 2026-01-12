@@ -266,7 +266,7 @@ export default function HomeClient() {
                 alt="Paula Abad Logo" 
                 className="w-10 h-10 rounded-lg"
               />
-              <span className="text-xl font-bold text-white"><a href='/'>Paula Abad</a></span><em className="text-slate">Desarrollador de Software</em>
+              <span className="text-xl font-bold text-white"><a href='/'>Paula Abad |</a></span><em className="text-slate">Desarrollador de Software</em>
             </div>
 
             {/* Desktop Menu */}
