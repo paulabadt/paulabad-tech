@@ -425,7 +425,7 @@ export default function HomeEnterprise() {
             Agenda una consulta gratuita de 30 minutos y recibe un análisis inicial sin compromiso
           </p>
           <a 
-            href="https://wa.me/573054434287?text=Hola,%20quiero%20agendar%20una%20consulta%20gratuita" 
+            href="https://wa.me/573054434287?text=Hola,%20quiero%20agendar%20una%20consulta%20gratuita." 
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-8 rounded-lg transition-all shadow-lg hover:shadow-xl"
