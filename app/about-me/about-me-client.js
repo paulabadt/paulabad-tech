@@ -42,7 +42,7 @@ export default function AboutMeClient() {
     es: {
       title: "Paula Abad",
       subtitle: "Desarrollador de Software",
-      description: "Soy Paula, Desarrolladora con enfoque en arquitecturas backend y proyectos IoT, e Instructora–Investigadora en el SENA con más de diez años de experiencia. Me apasiona la Ciencia de Datos y disfruto escribir sobre desarrollo de software, buenas prácticas y crecimiento profesional. También comparto algunas de mis aficiones, como los viajes, la Fórmula 1 y Pokémon Go."
+      description: "Soy Paula, Desarrolladora con enfoque en arquitecturas backend y proyectos IoT, e Instructora–Investigadora en el SENA con más de cinco años de experiencia. Me apasiona la Ciencia de Datos y disfruto escribir sobre desarrollo de software, buenas prácticas y crecimiento profesional. También comparto algunas de mis aficiones, como los viajes, la Fórmula 1 y Pokémon Go."
     },
     en: {
       title: "Paula Abad",
