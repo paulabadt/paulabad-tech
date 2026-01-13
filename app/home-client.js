@@ -122,6 +122,7 @@ export default function HomeEnterprise() {
             <div className="hidden md:flex items-center gap-8">
               <a href="#soluciones" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Soluciones</a>
               <a href="#servicios" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Servicios</a>
+              <a href="#sobre-mi" className="text-gray-600 hover:text-gray-900 text-sm font-medium">Sobre mí</a>
               <a 
                 href="/analisis-web" 
                 className="border-2 border-purple-500 text-purple-600 hover:bg-purple-50 text-sm font-semibold py-1.5 px-4 rounded-lg transition-colors flex items-center gap-2"
@@ -164,6 +165,7 @@ export default function HomeEnterprise() {
               >
                 Servicios
               </a>
+              <a href="#sobre-mi" onClick={() => setMobileMenuOpen(false)} className="block text-gray-600 hover:text-gray-900 font-medium">Sobre mí</a>
               <a 
                 href="/analisis-web" 
                 onClick={() => setMobileMenuOpen(false)}
@@ -251,8 +253,8 @@ export default function HomeEnterprise() {
             <div className="flex gap-16 animate-scroll-logos">
               {/* Primer set de logos */}
               <div className="flex gap-16 items-center shrink-0">
-                <img src="/sena.png" alt="SENA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/senova.png" alt="SENNOVA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/sena.png" alt="SENA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/mintic.png" alt="Mintic" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/sensory.jpg" alt="Sensory" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/yilmar.png" alt="Centro Cirugía" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
@@ -265,8 +267,8 @@ export default function HomeEnterprise() {
               
               {/* Segundo set duplicado para loop infinito */}
               <div className="flex gap-16 items-center shrink-0">
-                <img src="/sena.png" alt="SENA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/senova.png" alt="SENNOVA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
+                <img src="/sena.png" alt="SENA" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/mintic.png" alt="Mintic" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/sensory.jpg" alt="Sensory" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
                 <img src="/yilmar.png" alt="Centro Cirugía" className="h-20 w-auto object-contain grayscale hover:grayscale-0 transition-all" />
@@ -408,6 +410,8 @@ export default function HomeEnterprise() {
               </div>
             </div>
           </div>
+
+          
         </div>
       </section>
 
@@ -597,6 +601,72 @@ export default function HomeEnterprise() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sobre mí Section */}
+      <section id="sobre-mi" className="py-24 px-4 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            
+            {/* Left - Imagen */}
+            <div className="order-1 lg:order-1">
+              <div className="relative">
+                <div className="inline-flex items-center gap-2 bg-purple-50 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-6">
+                SOBRE MÍ
+                </div>
+              
+                <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+                  Desarrolladora de software 
+                </h2>
+                <p className="text-gray-900">con pasión por resolver problemas reales.</p>
+                {/* Stats Grid */}
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16">
+                  <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div className="text-4xl font-bold text-purple-600 mb-2">10+</div>
+                    <div className="text-sm text-gray-600">Años de experiencia</div>
+                  </div>
+                  <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                    <div className="text-sm text-gray-600">Satisfacción cliente</div>
+                  </div>
+                  <div className="bg-gray-50 rounded-2xl p-6 border border-gray-100">
+                    <div className="text-4xl font-bold text-purple-600 mb-2">15+</div>
+                    <div className="text-sm text-gray-600">Sectores atendidos</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right - Content */}
+            <div className="order-2 lg:order-2">
+              <div className="space-y-4 text-lg text-gray-600 leading-relaxed mb-8">
+                <p>
+                  Con más de <strong className="text-gray-900">10 años de experiencia</strong> en la industria del software, he trabajado con empresas de diversos sectores ayudándolas a transformar sus desafíos en soluciones tecnológicas escalables.
+                </p>
+                
+                <p>
+                  Mi especialización abarca <strong className="text-gray-900">Inteligencia Artificial, Data Science, desarrollo web y móvil</strong>, pero lo que realmente me motiva es entender el negocio detrás del código y crear software que genere valor medible.
+                </p>
+                
+                <p>
+                  Como <strong className="text-gray-900">instructora del SENA</strong> y consultora independiente, combino experiencia técnica con habilidades de comunicación para traducir necesidades complejas en soluciones simples y efectivas.
+                </p>
+              </div>
+
+              {/* CTA */}
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a 
+                  href="#contacto"
+                  className="inline-flex items-center justify-center gap-2 bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-6 rounded-lg transition-all"
+                >
+                  Trabajemos juntos
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
