@@ -269,7 +269,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                         required
                         value={formData.clientData.clientName}
                         onChange={(e) => handleInputChange('clientData', 'clientName', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                         placeholder="Juan García"
                       />
                     </div>
@@ -282,7 +282,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                         required
                         value={formData.clientData.clientEmail}
                         onChange={(e) => handleInputChange('clientData', 'clientEmail', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                         placeholder="juan@empresa.com"
                       />
                     </div>
@@ -294,7 +294,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                         type="tel"
                         value={formData.clientData.clientPhone}
                         onChange={(e) => handleInputChange('clientData', 'clientPhone', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                         placeholder="+57 3054434287"
                       />
                     </div>
@@ -307,7 +307,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                         required
                         value={formData.clientData.businessName}
                         onChange={(e) => handleInputChange('clientData', 'businessName', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                         placeholder="Soluciones TI S.A.S"
                       />
                     </div>
@@ -319,7 +319,8 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                         type="text"
                         value={formData.clientData.businessType}
                         onChange={(e) => handleInputChange('clientData', 'businessType', e.target.value)}
-                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                        className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400
+                        "
                         placeholder="Ej: Retail, Manufactura, Servicios, etc."
                       />
                     </div>
@@ -337,7 +338,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.functionality.description}
                       onChange={(e) => handleInputChange('functionality', 'description', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="4"
                       placeholder="Describe brevemente qué hace tu aplicación..."
                     />
@@ -364,14 +365,14 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                             value={screen.name}
                             onChange={(e) => handleArrayUpdate('functionality', 'mainScreens', index, 'name', e.target.value)}
                             placeholder="Nombre de la pantalla"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
                           />
                           <input
                             type="text"
                             value={screen.description}
                             onChange={(e) => handleArrayUpdate('functionality', 'mainScreens', index, 'description', e.target.value)}
                             placeholder="¿Qué hace?"
-                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg"
+                            className="flex-1 px-3 py-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
                           />
                           <button
                             type="button"
@@ -392,7 +393,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.functionality.userActions}
                       onChange={(e) => handleInputChange('functionality', 'userActions', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Describe cómo interactúan los usuarios con los datos..."
                     />
@@ -410,7 +411,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.database.currentStructure}
                       onChange={(e) => handleInputChange('database', 'currentStructure', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Describe tu esquema de BD..."
                     />
@@ -422,7 +423,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.database.criticalTables}
                       onChange={(e) => handleInputChange('database', 'criticalTables', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="¿Qué tablas son críticas? ¿Hay datos maestros?"
                     />
@@ -434,7 +435,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.database.storedProcedures}
                       onChange={(e) => handleInputChange('database', 'storedProcedures', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Detalla los procedimientos almacenados..."
                     />
@@ -446,7 +447,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.database.architectureChanges}
                       onChange={(e) => handleInputChange('database', 'architectureChanges', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="¿Necesitas cambios en la BD para la versión web?"
                     />
@@ -469,7 +470,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.businessLogic.logicLocation}
                       onChange={(e) => handleInputChange('businessLogic', 'logicLocation', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Describe dónde está distribuida tu lógica de negocio..."
                     />
@@ -481,7 +482,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.businessLogic.customDescription}
                       onChange={(e) => handleInputChange('businessLogic', 'customDescription', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="4"
                       placeholder="Explica brevemente cómo funciona tu negocio en la aplicación..."
                     />
@@ -493,7 +494,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.businessLogic.validationRules}
                       onChange={(e) => handleInputChange('businessLogic', 'validationRules', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: Un cliente no puede tener más de 5 órdenes pendientes..."
                     />
@@ -505,7 +506,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.businessLogic.complexCalculations}
                       onChange={(e) => handleInputChange('businessLogic', 'complexCalculations', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: Cálculo de comisiones, descuentos por volumen, etc..."
                     />
@@ -523,7 +524,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.integrations.externalSystems}
                       onChange={(e) => handleInputChange('integrations', 'externalSystems', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: ERP SAP, CRM Salesforce, bases de datos remotas..."
                     />
@@ -535,7 +536,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.integrations.communicationProtocols}
                       onChange={(e) => handleInputChange('integrations', 'communicationProtocols', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: REST, SOAP, WebServices, FTP, etc..."
                     />
@@ -547,7 +548,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.integrations.authentication}
                       onChange={(e) => handleInputChange('integrations', 'authentication', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: OAuth2, API Keys, Tokens, JWT..."
                     />
@@ -559,7 +560,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.integrations.syncFrequency}
                       onChange={(e) => handleInputChange('integrations', 'syncFrequency', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: Tiempo real, cada hora, diario, por demanda..."
                     />
@@ -577,7 +578,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.security.userManagement}
                       onChange={(e) => handleInputChange('security', 'userManagement', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Describe cómo se gestionan usuarios y accesos..."
                     />
@@ -589,7 +590,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.security.roles}
                       onChange={(e) => handleInputChange('security', 'roles', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: Administrador, Supervisor, Operario, Cliente..."
                     />
@@ -601,7 +602,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.security.authMechanism}
                       onChange={(e) => handleInputChange('security', 'authMechanism', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: Usuario/Contraseña, Biometría, 2FA, SSO..."
                     />
@@ -613,7 +614,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.security.dataEncryption}
                       onChange={(e) => handleInputChange('security', 'dataEncryption', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: Qué datos se encriptan, métodos utilizados..."
                     />
@@ -631,7 +632,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.performance.slowQueries}
                       onChange={(e) => handleInputChange('performance', 'slowQueries', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="¿Qué operaciones son lentas? ¿Cuáles son cuellos de botella?"
                     />
@@ -643,7 +644,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.performance.simultaneousUsers}
                       onChange={(e) => handleInputChange('performance', 'simultaneousUsers', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: 50 usuarios, 500 usuarios, 5000 usuarios simultáneos"
                     />
@@ -655,7 +656,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.performance.dataVolume}
                       onChange={(e) => handleInputChange('performance', 'dataVolume', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Ej: 1M de registros en clientes, 50M en transacciones..."
                     />
@@ -686,21 +687,21 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                           value={report.name}
                           onChange={(e) => handleArrayUpdate('reports', 'reportsList', index, 'name', e.target.value)}
                           placeholder="Nombre del reporte"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
                         />
                         <input
                           type="text"
                           value={report.format}
                           onChange={(e) => handleArrayUpdate('reports', 'reportsList', index, 'format', e.target.value)}
                           placeholder="Ej: Excel, PDF, CSV"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
                         />
                         <input
                           type="text"
                           value={report.parameters}
                           onChange={(e) => handleArrayUpdate('reports', 'reportsList', index, 'parameters', e.target.value)}
                           placeholder="Parámetros de filtrado"
-                          className="w-full px-3 py-2 border border-gray-300 rounded-lg"
+                          className="w-full px-3 py-2 border border-gray-300 rounded-lg text-black placeholder-gray-400"
                         />
                         <button
                           type="button"
@@ -725,7 +726,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.validations.fieldValidations}
                       onChange={(e) => handleInputChange('validations', 'fieldValidations', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: Campo requerido, formato email, números solo, máximo 100 caracteres..."
                     />
@@ -737,7 +738,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.validations.businessRules}
                       onChange={(e) => handleInputChange('validations', 'businessRules', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: No se puede eliminar un cliente que tiene órdenes..."
                     />
@@ -749,7 +750,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.validations.errorMessages}
                       onChange={(e) => handleInputChange('validations', 'errorMessages', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Describe los mensajes de error que se muestran..."
                     />
@@ -767,7 +768,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.configuration.configFiles}
                       onChange={(e) => handleInputChange('configuration', 'configFiles', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: config.xml, appsettings.json, .env, etc..."
                     />
@@ -779,7 +780,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.configuration.environmentVariables}
                       onChange={(e) => handleInputChange('configuration', 'environmentVariables', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: DATABASE_URL, API_KEY, LOG_LEVEL..."
                     />
@@ -791,7 +792,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.configuration.maintainability}
                       onChange={(e) => handleInputChange('configuration', 'maintainability', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="2"
                       placeholder="Describe el proceso de mantenimiento..."
                     />
@@ -809,7 +810,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.edgeCases.specialBehaviors}
                       onChange={(e) => handleInputChange('edgeCases', 'specialBehaviors', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Ej: Cálculos especiales en fin de mes, importación de datos..."
                     />
@@ -821,7 +822,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.edgeCases.exceptions}
                       onChange={(e) => handleInputChange('edgeCases', 'exceptions', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="¿Qué pasa si falla la conexión a BD? ¿Si el archivo es muy grande?"
                     />
@@ -833,7 +834,7 @@ export default function ChecklistForm({ onSubmit, isLoading }) {
                     <textarea
                       value={formData.edgeCases.complexScenarios}
                       onChange={(e) => handleInputChange('edgeCases', 'complexScenarios', e.target.value)}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent text-black placeholder-gray-400"
                       rows="3"
                       placeholder="Detalles que son fáciles de pasar por alto en migraciones..."
                     />
