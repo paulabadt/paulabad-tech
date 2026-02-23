@@ -423,8 +423,8 @@ export default function ProyectoContent({ proyecto, readmeContent, language, dar
             darkMode ? 'text-gray-300' : 'text-gray-700'
           }`}>
             ⚠️ {language === 'es'
-              ? 'Este proyecto fue desarrollado durante mi labor como instructora e investigadora en el SENA. Por esta razón, el código, las aplicaciones, la documentación y los repositorios son propiedad del SENA.'
-              : 'This project was developed during my work as an instructor and researcher at SENA. For this reason, the code, applications, documentation, and repositories are the property of SENA.'
+              ? 'Este proyecto fue desarrollado durante mi labor como Desarrolladora de Software e investigadora en el SENA. Por esta razón, el código, las aplicaciones, la documentación y los repositorios son propiedad del SENA.'
+              : 'This project was developed during my work as an Software Developer and researcher at SENA. For this reason, the code, applications, documentation, and repositories are the property of SENA.'
             }
           </p>
         </div>

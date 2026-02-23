@@ -493,8 +493,8 @@ const ProjectDocument = () => {
       doc.setFont('helvetica', 'normal');
       
       const pieTexto = [
-        'Cra 10 # 50-44 Barrio Maraya, Cali, Colombia',
-        'WhatsApp: +57 300 123 4567 | www.paulabad.tech | paula@paulabad.tech'
+        'Cra 10 # 50-44 Barrio Maraya, Pereira, Colombia',
+        'WhatsApp: +57 305 443 4287 | www.paulabad.tech | paula@paulabad.tech'
       ];
       
       doc.text(pieTexto[0], pageWidth / 2, pageHeight - 15, { align: 'center' });

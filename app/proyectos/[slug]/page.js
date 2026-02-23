@@ -177,6 +177,111 @@ const projectsData = [
       en: 'README.md'
     }
   },
+  {
+    id: 8,
+    slug: 'clinica-core',
+    translations: {
+      es: {
+        title: 'ClinicaCore — Plataforma Empresarial de Gestión para Clínicas Médicas'
+      },
+      en: {
+        title: 'ClinicaCore — Enterprise Medical Clinic Management Platform'
+      }
+    },
+    image: null,
+    date: '2026-02-20',
+    tags: ['Java 11', 'Spring Boot 2.7', 'Spring Security', 'Spring Data JPA', 'Elasticsearch', 'PostgreSQL', 'React 18', 'Redux Toolkit', 'Redux Thunk', 'Webpack 5', 'SASS', 'Docker', 'GitHub Actions', 'JWT', 'Liquibase', 'Jest', 'Cypress'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/clinicacore',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 9,
+    slug: 'wastetrack',
+    translations: {
+      es: {
+        title: 'WasteTrack — Plataforma IoT de Gestión de Flotas de Residuos Urbanos con Seguimiento Geoespacial en Tiempo Real'
+      },
+      en: {
+        title: 'WasteTrack — IoT-Powered Urban Waste Fleet Management Platform with Real-Time Geospatial Tracking'
+      }
+    },
+    image: null,
+    date: '2026-02-20',
+    tags: ['Java 17', 'Spring Boot 3.2', 'Spring Security', 'Spring Data JPA', 'Apache Kafka', 'MQTT', 'Mosquitto Broker', 'PostgreSQL', 'PostGIS', 'Redis', 'React 18', 'Redux Toolkit', 'Redux Thunk', 'Leaflet', 'Webpack 5', 'SASS', 'Docker', 'Docker Compose', 'GitHub Actions', 'JWT', 'JUnit 5', 'Mockito', 'Cypress'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/wastetrack',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 10,
+    slug: 'edu-track',
+    translations: {
+      es: {
+        title: 'EduTrack — Plataforma de Gestión del Aprendizaje con Seguimiento en Tiempo Real, Certificados QR y Notificaciones WebSocket'
+      },
+      en: {
+        title: 'EduTrack — Learning Management Platform with Real-Time Progress Tracking, QR Certificates and WebSocket Notifications'
+      }
+    },
+    image: null,
+    date: '2026-02-20',
+    tags: ['Node.js 20', 'NestJS', 'TypeScript', 'WebSockets', 'Socket.io', 'PostgreSQL', 'TypeORM', 'Redis', 'React 18', 'Redux Toolkit', 'Redux Thunk', 'Webpack 5', 'SASS', 'jsPDF', 'QRCode.js', 'JWT', 'Passport.js', 'Docker', 'Docker Compose', 'GitHub Actions', 'Jest', 'Supertest', 'React Testing Library', 'Cypress'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/edutrack',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 11,
+    slug: 'vehicleops',
+    translations: {
+      es: {
+        title: 'VehicleOps — Plataforma en Tiempo Real de Gestión de Flotas de Vehículos Industriales Autónomos con Kafka EDA, TimescaleDB y Mapbox'
+      },
+      en: {
+        title: 'VehicleOps — Real-Time Autonomous Industrial Vehicle Fleet Management Platform with Kafka EDA, TimescaleDB and Mapbox'
+      }
+    },
+    image: null,
+    date: '2026-02-20',
+    tags: ['Python 3.11', 'FastAPI', 'asyncio', 'aiokafka', 'Apache Kafka', 'TimescaleDB', 'PostgreSQL', 'asyncpg', 'SQLAlchemy 2.x', 'Redis', 'Pydantic v2', 'WebSockets', 'JWT', 'Passlib', 'React 18', 'TypeScript 5', 'Redux Toolkit', 'Redux Thunk', 'Mapbox GL JS 3', 'Chart.js 4', 'Webpack 5', 'SASS', 'Axios', 'Docker', 'Docker Compose', 'AWS ECS Fargate', 'AWS MSK', 'AWS RDS', 'GitHub Actions', 'Pytest', 'pytest-asyncio', 'httpx', 'React Testing Library', 'Cypress'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/vehicleops',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
+  {
+    id: 12,
+    slug: 'docu-flow',
+    translations: {
+      es: {
+        title: 'DocuFlow — Serverless Enterprise Document Processing Platform with AWS Lambda, Step Functions and CloudFormation'
+      },
+      en: {
+        title: 'DocuFlow — Serverless Enterprise Document Processing Platform with AWS Lambda, Step Functions and CloudFormation'
+      }
+    },
+    image: null,
+    date: '2026-02-20',
+    tags: ['Python 3.11', 'Django 5', 'Django REST Framework', 'Django Channels', 'Celery', 'AWS Lambda', 'AWS Step Functions', 'AWS S3', 'AWS Textract', 'AWS SQS', 'AWS ECS Fargate', 'AWS RDS PostgreSQL', 'AWS Cognito', 'AWS SES', 'AWS Secrets Manager', 'CloudFormation', 'LocalStack', 'Redis', 'PostgreSQL', 'React 18', 'TypeScript 5', 'Redux Toolkit', 'Redux Thunk', 'Webpack 5', 'SASS', 'Axios', 'Docker', 'Docker Compose', 'AWS ECR', 'GitHub Actions', 'Pytest', 'pytest-django', 'factory_boy', 'React Testing Library', 'Cypress'],
+    projectUrl: 'https://boutiqueluna.com',
+    githubUrl: 'https://github.com/paulabadt/docuflow',
+    readmeFiles: {
+      es: 'README.es.md',
+      en: 'README.md'
+    }
+  },
 ];
 
 export default function ProjectDetail() {
