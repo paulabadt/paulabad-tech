@@ -41,13 +41,13 @@ export default function AboutMeClient() {
   const content = {
     es: {
       title: "Paula Abad",
-      subtitle: "Desarrollador de Software",
-      description: "Soy Paula, Desarrolladora con enfoque en arquitecturas backend y proyectos IoT, e Instructora–Investigadora en el SENA con más de cinco años de experiencia. Me apasiona la Ciencia de Datos y disfruto escribir sobre desarrollo de software, buenas prácticas y crecimiento profesional. También comparto algunas de mis aficiones, como los viajes, la Fórmula 1 y Pokémon Go."
+      subtitle: "Ingeniera de Software Senior e Investigadora Tecnológica",
+      description: "Soy Paula, Ingeniera de Software Senior e Investigadora enfocada en arquitecturas Cloud-Native y soluciones IoT. Con más de 6 años de experiencia, incluyendo liderazgo en I+D en el SENA, construyo sistemas escalables con Java, Python y React. Me apasiona la Ciencia de Datos, el diseño orientado a eventos y escribir sobre tecnología. Fuera del código, soy viajera, fan de la F1 y entrenadora de Pokémon Go."
     },
     en: {
       title: "Paula Abad",
-      subtitle: "Software Developer",
-      description: "I’m Paula, a Developer focused on backend architectures and IoT projects, as well as an Instructor–Researcher at SENA with over two years of experience. I’m passionate about Data Science and enjoy writing about software development, best practices, and professional growth. I also share some of my personal interests, such as travel, Formula 1, and Pokémon Go."
+      subtitle: "Senior Software Engineer & Tech Researcher",
+      description: "I’m Paula, a Senior Software Engineer & Researcher specializing in Cloud-Native architectures and IoT solutions. With 6+ years of experience—including R&D leadership at SENA—I build scalable systems using Java, Python, and React. I’m passionate about Data Science, Event-Driven design, and sharing tech insights. Outside of code, I’m a traveler, F1 fan, and Pokémon Go trainer."
     }
   };
 

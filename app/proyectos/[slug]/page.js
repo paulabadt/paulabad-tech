@@ -266,7 +266,7 @@ const projectsData = [
     slug: 'docu-flow',
     translations: {
       es: {
-        title: 'DocuFlow — Serverless Enterprise Document Processing Platform with AWS Lambda, Step Functions and CloudFormation'
+        title: 'DocuFlow — Plataforma Serverless de Procesamiento Documental Empresarial con AWS Lambda, Step Functions y CloudFormation'
       },
       en: {
         title: 'DocuFlow — Serverless Enterprise Document Processing Platform with AWS Lambda, Step Functions and CloudFormation'
