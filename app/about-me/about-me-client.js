@@ -28,6 +28,12 @@ const DiscordIcon = ({ className }) => (
   </svg>
 );
 
+const LinkedInIcon = ({ className }) => (
+  <svg className={className} fill="currentColor" viewBox="0 0 24 24">
+    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+  </svg>
+);
+
 export default function AboutMeClient() {
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('es');
@@ -42,12 +48,12 @@ export default function AboutMeClient() {
     es: {
       title: "Paula Abad",
       subtitle: "Ingeniera de Software Senior e Investigadora Tecnológica",
-      description: "Soy Paula, Ingeniera de Software Senior e Investigadora enfocada en arquitecturas Cloud-Native y soluciones IoT. Con más de 6 años de experiencia, incluyendo liderazgo en I+D en el SENA, construyo sistemas escalables con Java, Python y React. Me apasiona la Ciencia de Datos, el diseño orientado a eventos y escribir sobre tecnología. Fuera del código, soy viajera, fan de la F1 y entrenadora de Pokémon Go."
+      description: "Soy Paula, Ingeniera de Software Senior e Investigadora enfocada en arquitecturas Cloud-Native y soluciones IoT. Con más de 5 años de experiencia, incluyendo liderazgo en I+D en el SENA, construyo sistemas escalables con Java, Python y React. Me apasiona la Ciencia de Datos, el diseño orientado a eventos y escribir sobre tecnología. Fuera del código, soy viajera, fan de la F1 y entrenadora de Pokémon Go."
     },
     en: {
       title: "Paula Abad",
       subtitle: "Senior Software Engineer & Tech Researcher",
-      description: "I’m Paula, a Senior Software Engineer & Researcher specializing in Cloud-Native architectures and IoT solutions. With 6+ years of experience—including R&D leadership at SENA—I build scalable systems using Java, Python, and React. I’m passionate about Data Science, Event-Driven design, and sharing tech insights. Outside of code, I’m a traveler, F1 fan, and Pokémon Go trainer."
+      description: "I’m Paula, a Senior Software Engineer & Researcher specializing in Cloud-Native architectures and IoT solutions. With 5+ years of experience—including R&D leadership at SENA—I build scalable systems using Java, Python, and React. I’m passionate about Data Science, Event-Driven design, and sharing tech insights. Outside of code, I’m a traveler, F1 fan, and Pokémon Go trainer."
     }
   };
 
@@ -65,7 +71,7 @@ export default function AboutMeClient() {
             image: 'https://paulabad.tech/paula-avatar.jpeg',
             sameAs: [
               'https://github.com/paulabadt',
-              'https://linkedin.com/in/tu-perfil', // ⚠️ CAMBIAR por tu LinkedIn real
+              'https://www.linkedin.com/in/pandrebad/', // ⚠️ CAMBIAR por tu LinkedIn real
               'https://tiktok.com/@paulabadtech',
               'https://instagram.com/paulabadtech',
               'https://twitter.com/libeluladoradas',
@@ -97,6 +103,16 @@ export default function AboutMeClient() {
 
           {/* Desktop Icons Menu */}
           <div className="hidden md:flex items-center gap-6">
+            {/* Linkedin */}
+            <a 
+              href="https://www.linkedin.com/in/pandrebad/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transition-colors hover:text-purple-500 ${darkMode ? 'text-gray-300' : 'text-black'}`}
+              aria-label="Linkedin"
+            >
+              <LinkedInIcon className="w-5 h-5" />
+            </a>
             {/* TikTok */}
             <a 
               href="https://tiktok.com/@paulabadtech" 
@@ -194,13 +210,13 @@ export default function AboutMeClient() {
               <div className="pt-4">
                 <div className="grid grid-cols-2 gap-4">
                   <a 
-                    href="https://tiktok.com/@paulabadev" 
+                    href="https://www.linkedin.com/in/pandrebad/" 
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`flex items-center gap-3 py-2 transition-colors ${darkMode ? 'text-gray-300 hover:text-purple-400' : 'text-gray-700 hover:text-purple-500'}`}
                   >
-                    <TikTokIcon className="w-5 h-5" />
-                    <span className="text-sm">TikTok</span>
+                    <LinkedInIcon className="w-5 h-5" />
+                    <span className="text-sm">LinkedIn</span>
                   </a>
                   {/* Email */}
                   <a 
@@ -241,6 +257,14 @@ export default function AboutMeClient() {
 
           {/* Social Icons Row */}
           <div className="flex items-center justify-center gap-4 mb-8">
+            <a 
+              href="https://www.linkedin.com/in/pandrebad/" 
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transition-all hover:scale-110 ${darkMode ? 'text-gray-400 hover:text-purple-400' : 'text-gray-600 hover:text-purple-500'}`}
+            >
+              <LinkedInIcon className="w-7 h-7" />
+            </a>
             <a 
               href="https://tiktok.com/@paulabadtech" 
               target="_blank"

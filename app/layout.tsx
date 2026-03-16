@@ -185,7 +185,7 @@ export default function RootLayout({
                 'https://tiktok.com/@paulabadtech',
                 'https://twitter.com/libeluladoradas',
                 'https://instagram.com/paulabadtech',
-                'https://www.linkedin.com/in/tu-perfil',
+                'https://www.linkedin.com/in/pandrebad/',
               ],
               worksFor: {
                 '@type': 'Organization',
