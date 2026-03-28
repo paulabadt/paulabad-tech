@@ -89,20 +89,12 @@ async function generateUniqueReportNumber(maxRetries = 5) {
 
 export async function POST(request) {
   try {
-    const { name, phone, url, termsAccepted } = await request.json();
+    const { url } = await request.json();
 
     // Validación básica
-    if (!name || !phone || !url) {
+    if (!url) {
       return NextResponse.json(
-        { error: 'Todos los campos son requeridos' },
-        { status: 400 }
-      );
-    }
-
-    // Validar que aceptó los términos
-    if (!termsAccepted) {
-      return NextResponse.json(
-        { error: 'Debes aceptar los términos y condiciones' },
+        { error: 'La URL es requerida' },
         { status: 400 }
       );
     }
@@ -151,11 +143,7 @@ export async function POST(request) {
           leadId: existingLead.id,
           reportNumber: existingLead.report_number
         },
-        message: `Este sitio ya fue analizado el ${formattedDate} a las ${formattedTime}.`,
-        contactInfo: {
-          name: existingLead.name,
-          phone: existingLead.phone
-        }
+        message: `Este sitio ya fue analizado el ${formattedDate} a las ${formattedTime}.`
       });
     }
 
@@ -290,10 +278,7 @@ export async function POST(request) {
           .from('leads')
           .insert({
             report_number: reportNumber,
-            name: name,
-            phone: phone,
             website_url: url,
-            terms_accepted: true,
             analysis_summary: aiAnalysis.executiveSummary,
             performance_score: technicalScores.performance,
             seo_score: technicalScores.seo,
@@ -355,7 +340,7 @@ export async function POST(request) {
       // Datos para generar PDF en el cliente
       pdfData: {
         reportNumber: aiAnalysis.reportNumber,
-        name: name,
+        name: '',
         url: url,
         scores: technicalScores,
         analysis: aiAnalysis

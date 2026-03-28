@@ -1,6 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
-import { Search, Zap, BarChart3, TrendingUp, CheckCircle2, XCircle, Download, MessageCircle, Clock, AlertTriangle, ArrowRight, Sparkles, Target, Users, Award, MailOpen, Phone, Menu, X } from 'lucide-react';
+import { Search, Zap, BarChart3, TrendingUp, CheckCircle2, XCircle, Download, MessageCircle, Clock, AlertTriangle, ArrowRight, Sparkles, Target, Award, MailOpen, Phone, Menu, X, Users } from 'lucide-react';
 import { generateClientPDF } from '@/lib/pdfGenerator';
 
 // Iconos SVG personalizados
@@ -143,7 +143,7 @@ const TestimonialCard = ({ testimonial }) => (
 );
 
 export default function HomeClient() {
-  const [formData, setFormData] = useState({ name: '', phone: '', url: '', termsAccepted: false });
+  const [formData, setFormData] = useState({ url: '' });
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState(null);
@@ -198,7 +198,8 @@ export default function HomeClient() {
 
     try {
       const doc = generateClientPDF(result.pdfData);
-      doc.save(`analisis-web-${formData.name.replace(/\s+/g, '-').toLowerCase()}.pdf`);
+      const urlSlug = formData.url.replace(/https?:\/\/(www\.)?/, '').replace(/[^a-z0-9]/gi, '-').toLowerCase();
+      doc.save(`analisis-web-${urlSlug}.pdf`);
     } catch (error) {
       console.error('Error generando PDF:', error);
       alert('Error al generar el PDF. Por favor intenta nuevamente.');
@@ -387,39 +388,6 @@ export default function HomeClient() {
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="flex items-center gap-2 text-white font-semibold mb-2 text-sm">
-                  <Users className="w-4 h-4 text-purple-400" />
-                  Nombre completo
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder="Juan Pérez"
-                  required
-                  className="w-full px-5 py-3 bg-slate-900/50 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all text-sm"
-                />
-              </div>
-
-              <div>
-                <label className="flex items-center gap-2 text-white font-semibold mb-2 text-sm">
-                  <MessageCircle className="w-4 h-4 text-purple-400" />
-                  WhatsApp
-                </label>
-                <input
-                  type="tel"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder="+57 300 123 4567"
-                  required
-                  className="w-full px-5 py-3 bg-slate-900/50 border border-purple-500/30 rounded-xl text-white placeholder-gray-500 focus:border-purple-500 focus:outline-none focus:ring-2 focus:ring-purple-500/20 transition-all text-sm"
-                />
-                <p className="text-xs text-gray-400 mt-1">Te contactaremos con recomendaciones</p>
-              </div>
-
-              <div>
-                <label className="flex items-center gap-2 text-white font-semibold mb-2 text-sm">
                   <Search className="w-4 h-4 text-purple-400" />
                   URL de tu sitio web
                 </label>
@@ -434,41 +402,9 @@ export default function HomeClient() {
                 />
               </div>
 
-              {/* Términos y Condiciones */}
-              <div className="flex items-start gap-3 bg-slate-900/30 border border-purple-500/20 rounded-xl p-4">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  name="termsAccepted"
-                  checked={formData.termsAccepted}
-                  onChange={(e) => setFormData({ ...formData, termsAccepted: e.target.checked })}
-                  required
-                  className="w-4 h-4 mt-0.5 accent-purple-500 cursor-pointer flex-shrink-0"
-                />
-                <label htmlFor="terms" className="text-xs text-gray-300 cursor-pointer">
-                  Acepto el{' '}
-                  <a 
-                    href="/politica-privacidad" 
-                    target="_blank" 
-                    className="text-purple-400 hover:text-purple-300 underline"
-                  >
-                    tratamiento de datos personales
-                  </a>
-                  {' '}y los{' '}
-                  <a 
-                    href="/terminos-condiciones" 
-                    target="_blank" 
-                    className="text-purple-400 hover:text-purple-300 underline"
-                  >
-                    términos y condiciones
-                  </a>
-                  . Los datos proporcionados serán utilizados únicamente para realizar el análisis de tu sitio web y contactarte con los resultados.
-                </label>
-              </div>
-
               <button
                 type="submit"
-                disabled={loading || !formData.termsAccepted}
+                disabled={loading}
                 className="w-full bg-gradient-to-r from-purple-500 via-pink-500 to-purple-500 text-white font-bold py-4 px-6 rounded-xl transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-purple-500/50 hover:shadow-xl hover:shadow-purple-500/50 hover:scale-[1.02] flex items-center justify-center gap-2 text-base"
               >
                 {loading ? (
@@ -561,7 +497,7 @@ export default function HomeClient() {
                     <CheckCircle2 className="w-8 h-8 text-green-400 flex-shrink-0" />
                     <div className="flex-1">
                       <h3 className="text-white font-bold text-xl mb-2">
-                        ¡Análisis Completado, {formData.name}!
+                        ¡Análisis Completado!
                       </h3>
                       <p className="text-gray-300">
                         Tu sitio tiene oportunidades significativas de mejora
