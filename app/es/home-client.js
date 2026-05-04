@@ -6,6 +6,7 @@ import {
   Mail, Phone, MessageCircle, TrendingUp, Users, Award,
   Target, Lock, Cpu, Globe
 } from 'lucide-react';
+import LanguageSelector from '@/components/LanguageSelector';
 
 // Iconos personalizados
 const InstagramIcon = ({ className }) => (
@@ -141,6 +142,8 @@ export default function HomeEnterprise() {
               >
                 Contactar
               </a>
+              {/* AGREGAR AQUÍ EL SELECTOR */}
+              <LanguageSelector />
             </div>
 
             {/* Mobile Menu Button */}
@@ -179,6 +182,16 @@ export default function HomeEnterprise() {
               >
                 Análisis Web
               </a>
+              {/* Selector de Idioma Mobile */}
+              <div className="border-t border-gray-200 pt-4">
+                <p className="text-xs text-gray-500 mb-2 px-2">Idioma</p>
+                <a href="/" className="block px-2 py-2 text-gray-600 hover:bg-gray-50 rounded-lg mb-2">
+                  🇺🇸 English
+                </a>
+                <a href="/es" className="block px-2 py-2 text-purple-600 bg-purple-50 rounded-lg font-medium">
+                  🇪🇸 Español
+                </a>
+              </div>
               <a 
                 href="#contacto" 
                 onClick={() => setMobileMenuOpen(false)}

@@ -1,4 +1,4 @@
-import HomeClient from './home-client-en';
+import HomeClient from './home-client';
 
 // ✅ Generar metadata dinámicamente
 export async function generateMetadata() {
